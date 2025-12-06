@@ -39,6 +39,3 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	# falling off the map
-	if(global_position.y < -100):
-		global_position = Vector3.ZERO
