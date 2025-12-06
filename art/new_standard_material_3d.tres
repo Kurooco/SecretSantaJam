@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bcthhcniqi7hj"]
+
+[ext_resource type="Texture2D" uid="uid://ckjigi0cgs8js" path="res://art/DSC_0032.JPG" id="2_th2fe"]
+
+[resource]
+albedo_texture = ExtResource("2_th2fe")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.05615
+uv1_world_triplanar = true
+uv2_triplanar = true
+uv2_triplanar_sharpness = 1.25598
+uv2_world_triplanar = true
