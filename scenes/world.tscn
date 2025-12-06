@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://cwwksivvosaxj"]
 
-[ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://world.gd" id="1_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="1_f3sb7"]
-[ext_resource type="Shader" uid="uid://hslswwr7i0vi" path="res://art/pixelate.gdshader" id="2_fj7yv"]
-[ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/new_standard_material_3d.tres" id="3_aqk2v"]
+[ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_k0juu"]
+[ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
+[ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_qfnet"]
+[ext_resource type="Shader" uid="uid://hslswwr7i0vi" path="res://art/shaders/pixelate.gdshader" id="4_i7141"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_036b0"]
-material = ExtResource("3_aqk2v")
+material = ExtResource("3_qfnet")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tlwt5"]
-shader = ExtResource("2_fj7yv")
+shader = ExtResource("4_i7141")
 shader_parameter/pixel_size = 8
 
 [node name="World" type="Node3D"]
-script = ExtResource("1_aqk2v")
+script = ExtResource("1_k0juu")
 
-[node name="Node3D" parent="." instance=ExtResource("1_f3sb7")]
+[node name="Node3D" parent="." instance=ExtResource("2_71j4m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02669, 1.71438, 5.52835)
 
 [node name="Cement" type="StaticBody3D" parent="."]
