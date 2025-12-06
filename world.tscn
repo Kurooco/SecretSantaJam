@@ -20,7 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02669, 1.89917, 5.52835)
 [node name="Cement" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cement"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60883, -0.671845, -0.382081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.60883, -0.671845, 3.75673)
 shape = SubResource("BoxShape3D_f3sb7")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Cement"]
