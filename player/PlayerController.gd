@@ -15,27 +15,14 @@ func _input(event: InputEvent):
 	if (Input.mouse_mode != Input.MOUSE_MODE_CAPTURED) and event is InputEventMouseButton: 
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if(event is InputEventMouseMotion):
-		print_debug(event.relative)
 		mouse_position += event.relative
 		var viewport_size = get_viewport().size
 		mouse_position = Vector2(int(mouse_position.x) % viewport_size.x, max(min(mouse_position.y, viewport_size.y/2.0), 20))
-		
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(Input.mouse_mode == Input.MOUSE_MODE_HIDDEN):
-		var mouse = get_viewport().get_mouse_position()
-		var viewport_size = get_viewport().size
-		#get_viewport().warp_mouse(Vector2(int(mouse.x+viewport_size.x) % viewport_size.x, int(mouse.y+viewport_size.y) % viewport_size.y))
-		#get_viewport().warp_mouse(Vector2(int(mouse.x+viewport_size.x) % viewport_size.x, max(min(mouse.y, viewport_size.y/2.0), 20)))
 	if(Input.is_action_pressed("ui_cancel")):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if(Input.is_action_pressed("ui_accept")):
-		get_tree().quit()
-		
-	#if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
-	#	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 	h_rads = -mouse_position.x*2*PI/get_viewport().size.x
 	v_rads = mouse_position.y*2*PI/get_viewport().size.y
