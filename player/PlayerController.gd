@@ -4,6 +4,7 @@ var h_rads = 0
 var v_rads = 0
 var first_person = false
 var height
+var mouse_position = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,10 +14,16 @@ func _ready():
 func _input(event: InputEvent):
 	if (Input.mouse_mode != Input.MOUSE_MODE_CAPTURED) and event is InputEventMouseButton: 
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if(event is InputEventMouseMotion):
+		print_debug(event.relative)
+		mouse_position += event.relative
+		var viewport_size = get_viewport().size
+		mouse_position = Vector2(int(mouse_position.x) % viewport_size.x, max(min(mouse_position.y, viewport_size.y/2.0), 20))
+		
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	if(Input.mouse_mode == Input.MOUSE_MODE_HIDDEN):
 		var mouse = get_viewport().get_mouse_position()
 		var viewport_size = get_viewport().size
@@ -30,8 +37,8 @@ func _process(delta):
 	#if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
 	#	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
-	h_rads = -get_viewport().get_mouse_position().x*2*PI/get_viewport().size.x
-	v_rads = get_viewport().get_mouse_position().y*2*PI/get_viewport().size.y
+	h_rads = -mouse_position.x*2*PI/get_viewport().size.x
+	v_rads = mouse_position.y*2*PI/get_viewport().size.y
 	v_rads = max(0, v_rads)
 	var b = Basis()
 	
