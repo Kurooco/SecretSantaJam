@@ -1,12 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwwksivvosaxj"]
+[gd_scene load_steps=12 format=3 uid="uid://cwwksivvosaxj"]
 
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_qfnet"]
 [ext_resource type="Shader" uid="uid://hslswwr7i0vi" path="res://art/shaders/pixelate.gdshader" id="4_i7141"]
+[ext_resource type="Texture2D" uid="uid://crrirywkyelj2" path="res://art/textures/DSC_0216.JPG" id="4_qfnet"]
+[ext_resource type="Texture2D" uid="uid://b8xkho4rmnowb" path="res://art/2d/keep_out.png" id="6_qfnet"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_036b0"]
 material = ExtResource("3_qfnet")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71j4m"]
+albedo_texture = ExtResource("4_qfnet")
+uv1_scale = Vector3(9, 9, 9)
+uv2_scale = Vector3(9, 9, 9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qfnet"]
+material = SubResource("StandardMaterial3D_71j4m")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71j4m"]
+size = Vector3(1, 5.27441, 8.42004)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tlwt5"]
 shader = ExtResource("4_i7141")
@@ -16,17 +29,81 @@ shader_parameter/pixel_size = 8
 script = ExtResource("1_k0juu")
 
 [node name="Node3D" parent="." instance=ExtResource("2_71j4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02669, 1.71438, 5.52835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0431, 1.71438, 29.8679)
 
 [node name="Cement" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(-56.0801, 0, 0, 0, 1, 0, 0, 0, -79.0213, 0, 0, 0)
+transform = Transform3D(-30.3385, 0, 0, 0, 1, 0, 0, 0, -79.0213, 11.3971, 0, 0)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-30.3385, 0, 0, 0, 1, 0, 0, 0, -41.0721, -49.1746, -0.854641, -4.21669)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-30.3385, 0, 0, 0, 1, 0, 0, 0, -41.0721, -6.54138, -12.3386, 20.0172)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-85.1099, 0, 0, 0, 1, 0, 0, 0, -41.0721, -5.00484, -16.8808, 20.0172)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-30.3385, 0, 0, 0, 1.17186, 5.16568, 0, 0.463308, -13.0657, -28.7351, -14.7292, 22.1433)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-56.0801, 0, 0, 0, 1, 0, 0, 0, -79.0213, 55.3015, -0.411057, 19.1674)
+mesh = SubResource("BoxMesh_qfnet")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-122.769, 0, 0, 0, 1, 0, 0, 0, -79.0213, -31.7652, 5.22845, 0)
 mesh = SubResource("BoxMesh_036b0")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(-56.0801, 0, 0, 0, 1, 0, 0, 0, -79.0213, 0, 3.6441, 0)
+transform = Transform3D(-56.0801, 0, 0, 0, -4.37114e-08, -17.092, 0, -1, 7.47114e-07, -6.75881, -3.03589, 13.1502)
 mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-56.0801, 0, 0, 0, -4.37114e-08, -35.3668, 0, -1, 1.54593e-06, -35.7705, -7.73045, 16.5464)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-136.24, 0, 0, 0, -4.37114e-08, -17.092, 0, -1, 7.47114e-07, -9.07736, 0.0491028, -6.93943)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(1.05047e-06, -1, 7.47114e-07, 0, -4.37114e-08, -17.092, 24.032, 4.37114e-08, -3.26574e-14, -3.20819, -8.52667, 4.05774)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(3.94613e-14, 1.55294e-22, -17.092, -1.05047e-06, 1, -1.11034e-35, 24.032, 4.37114e-08, -3.26574e-14, -12.1865, -8.52667, 4.05774)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-5.25237e-07, 0.5, -14.8021, -9.09737e-07, 0.866025, 8.54599, 24.032, 4.37114e-08, -3.26574e-14, -26.7736, -4.97447, 4.05774)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-72.0984, 0, 0, 0, -4.37114e-08, -40.9554, 0, -1, 1.79022e-06, -8.41132, -3.68845, 35.0631)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(1.55346e-06, -1, 1.10765e-06, 0, -4.37114e-08, -25.3401, 35.5391, 4.37114e-08, -1.38443e-13, 8.49094, -3.97864, 18.2267)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(2.75563e-06, -1, 1.66384e-06, 0, -4.37114e-08, -38.0642, 63.0414, 4.37114e-08, -2.0796e-13, -44.2712, -3.97864, 8.5163)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(2.45134e-06, -1, 1.10765e-06, 0, -4.37114e-08, -25.3401, 56.0801, 4.37114e-08, -1.38443e-13, 26.7598, -4.08989, 0.141904)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cement"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2501, 2.13721, 30.6818)
+shape = SubResource("BoxShape3D_71j4m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -38,3 +115,13 @@ offset_right = 1650.0
 offset_bottom = 1078.0
 
 [node name="Other" type="StaticBody3D" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.353453, -0.76522, -0.53806, -0.116203, -0.534816, 0.83694, -0.928207, 0.358343, 0.100112, 29.4352, 6.23073, 28.0805)
+light_color = Color(0.972549, 0.658824, 0, 1)
+light_energy = 10.294
+spot_range = 13.303
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8505, 2.2315, 13.832)
+texture = ExtResource("6_qfnet")

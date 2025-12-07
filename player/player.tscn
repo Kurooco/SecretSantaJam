@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cch06b7sjcfup" path="res://player/PlayerController.gd" id="1_uaqca"]
 [ext_resource type="Script" uid="uid://dqdilivosiehl" path="res://player/Player.gd" id="2_le1eh"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1t3vv"]
-size = Vector3(1, 2.56012, 1)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rkbax"]
+height = 2.30883
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4dnt"]
 
@@ -44,7 +44,7 @@ script = ExtResource("1_uaqca")
 script = ExtResource("2_le1eh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("BoxShape3D_1t3vv")
+shape = SubResource("CapsuleShape3D_rkbax")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0582462, 0)
@@ -52,7 +52,7 @@ mesh = SubResource("BoxMesh_y2f0a")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995664, 0)
-omni_range = 10.4521
+omni_range = 24.607
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.915182, 0)
