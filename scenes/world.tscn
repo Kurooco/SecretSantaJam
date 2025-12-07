@@ -3,27 +3,24 @@
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_qfnet"]
-[ext_resource type="Shader" uid="uid://hslswwr7i0vi" path="res://art/shaders/pixelate.gdshader" id="4_i7141"]
 [ext_resource type="Texture2D" uid="uid://crrirywkyelj2" path="res://art/textures/DSC_0216.JPG" id="4_qfnet"]
 [ext_resource type="Texture2D" uid="uid://b8xkho4rmnowb" path="res://art/2d/keep_out.png" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="8_4mrxx"]
+[ext_resource type="PackedScene" uid="uid://ddpo0het20fbc" path="res://scenes/door.tscn" id="8_7r4gi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_036b0"]
 material = ExtResource("3_qfnet")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71j4m"]
 albedo_texture = ExtResource("4_qfnet")
-uv1_scale = Vector3(9, 9, 9)
-uv2_scale = Vector3(9, 9, 9)
+uv1_scale = Vector3(40, 40, 40)
+uv2_scale = Vector3(40, 40, 40)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qfnet"]
 material = SubResource("StandardMaterial3D_71j4m")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_71j4m"]
 size = Vector3(1, 5.27441, 8.42004)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tlwt5"]
-shader = ExtResource("4_i7141")
-shader_parameter/pixel_size = 8
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_k0juu")
@@ -54,7 +51,7 @@ transform = Transform3D(-30.3385, 0, 0, 0, 1.17186, 5.16568, 0, 0.463308, -13.06
 mesh = SubResource("BoxMesh_036b0")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(-56.0801, 0, 0, 0, 1, 0, 0, 0, -79.0213, 55.3015, -0.411057, 19.1674)
+transform = Transform3D(-56.0801, 0, 0, 0, 1, 0, 0, 0, -79.0213, 52.6028, -0.411057, 19.1674)
 mesh = SubResource("BoxMesh_qfnet")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement"]
@@ -69,8 +66,16 @@ mesh = SubResource("BoxMesh_036b0")
 transform = Transform3D(-56.0801, 0, 0, 0, -4.37114e-08, -35.3668, 0, -1, 1.54593e-06, -35.7705, -7.73045, 16.5464)
 mesh = SubResource("BoxMesh_036b0")
 
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-8.86267, -0.0234375, 1.37455e-08, -4.02221e-14, -4.37114e-08, -13.4169, 0.207777, -0.999725, 5.8631e-07, -5.74572, -19.3593, 16.5036)
+mesh = SubResource("BoxMesh_036b0")
+
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(-136.24, 0, 0, 0, -4.37114e-08, -17.092, 0, -1, 7.47114e-07, -9.07736, 0.0491028, -6.93943)
+transform = Transform3D(-136.24, 0, 0, 0, -4.37114e-08, -25.2281, 0, -1, 1.10275e-06, -9.07736, -3.86643, -6.93943)
+mesh = SubResource("BoxMesh_036b0")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(-136.24, 0, 0, 0, -4.37114e-08, -25.2281, 0, -1, 1.10275e-06, -9.07736, -21.7319, -0.060931)
 mesh = SubResource("BoxMesh_036b0")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="Cement"]
@@ -105,15 +110,6 @@ mesh = SubResource("BoxMesh_036b0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2501, 2.13721, 30.6818)
 shape = SubResource("BoxShape3D_71j4m")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_tlwt5")
-offset_left = -121.0
-offset_top = -117.0
-offset_right = 1650.0
-offset_bottom = 1078.0
-
 [node name="Other" type="StaticBody3D" parent="."]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
@@ -125,3 +121,7 @@ spot_range = 13.303
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8505, 2.2315, 13.832)
 texture = ExtResource("6_qfnet")
+
+[node name="Door" parent="." instance=ExtResource("8_7r4gi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2105, 2.29287, 18.7974)
+level = ExtResource("8_4mrxx")

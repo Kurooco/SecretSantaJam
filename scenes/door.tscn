@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddpo0het20fbc"]
+
+[ext_resource type="Texture2D" uid="uid://d2wnogngfhar5" path="res://art/2d/door.png" id="1_uvdjg"]
+[ext_resource type="PackedScene" uid="uid://dufu5qpeveefp" path="res://scenes/interaction_area.tscn" id="2_83dcw"]
+[ext_resource type="Script" uid="uid://bhcmg6utu0cpn" path="res://scenes/door.gd" id="2_la1wf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_la1wf"]
+size = Vector3(3.19916, 3.72076, 2.39355)
+
+[node name="Door" type="Sprite3D"]
+texture = ExtResource("1_uvdjg")
+script = ExtResource("2_la1wf")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_83dcw")]
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144623, 0.301849, 1.23584)
+shape = SubResource("BoxShape3D_la1wf")
+debug_color = Color(0.949982, 4.23551e-06, 0.570836, 0.42)
+
+[connection signal="activated" from="InteractionArea" to="." method="_on_interaction_area_activated"]

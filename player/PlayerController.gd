@@ -6,6 +6,8 @@ var first_person = false
 var height
 var mouse_position = Vector2.ZERO
 
+@onready var detection_area = $Player/DetectionArea
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
@@ -50,5 +52,16 @@ func _process(delta):
 	$CameraPivot.transform.basis = b
 	$CameraPivot.global_position = lerp($CameraPivot.global_position, $Player.global_position+Vector3(0, height, 0), 1) #.05
 	
-	
+	# Handle Interactions
+	if(Input.is_action_just_pressed("interact")):
+		activate_interactive_areas()
+	var areas_inside = false
+	for area in detection_area.get_overlapping_areas():
+		if(area is InteractionArea && area.show_prompt && !area.activated_since_entering):
+			areas_inside = true
+	$Prompt.visible = areas_inside
 		
+func activate_interactive_areas():
+	for area in detection_area.get_overlapping_areas():
+		if(area is InteractionArea):
+			area.activate()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://br6qsupvcmxyl"]
+[gd_scene load_steps=14 format=3 uid="uid://br6qsupvcmxyl"]
 
 [ext_resource type="Script" uid="uid://cch06b7sjcfup" path="res://player/PlayerController.gd" id="1_uaqca"]
 [ext_resource type="Script" uid="uid://dqdilivosiehl" path="res://player/Player.gd" id="2_le1eh"]
@@ -11,6 +11,9 @@ height = 2.30883
 [sub_resource type="BoxMesh" id="BoxMesh_y2f0a"]
 material = SubResource("StandardMaterial3D_t4dnt")
 size = Vector3(1, 2.3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rkbax"]
+size = Vector3(1, 2.2265, 1)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qjkh3"]
 
@@ -54,6 +57,12 @@ mesh = SubResource("BoxMesh_y2f0a")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.995664, 0)
 omni_range = 24.607
 
+[node name="DetectionArea" type="Area3D" parent="Player"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/DetectionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0186462, 0)
+shape = SubResource("BoxShape3D_rkbax")
+
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.915182, 0)
 rotation_edit_mode = 2
@@ -80,3 +89,22 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, -1, -1.39091e-08, 0, 1.39091e-08, -1, 0, -7.23861, -2.15727e-07)
 mesh = SubResource("CylinderMesh_ltuqr")
 skeleton = NodePath("../..")
+
+[node name="Prompt" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Label" type="Label" parent="Prompt"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -123.0
+offset_right = 71.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Press E"
+horizontal_alignment = 1

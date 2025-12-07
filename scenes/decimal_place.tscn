@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cloa0qy8m1jw8"]
+
+[ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_7sxnj"]
+[ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_3d1dw"]
+[ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_3d1dw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ksw0"]
+material = ExtResource("3_3d1dw")
+
+[node name="DecimalPlace" type="Node3D"]
+script = ExtResource("1_7sxnj")
+
+[node name="Node3D" parent="." instance=ExtResource("2_3d1dw")]
+
+[node name="Cement" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cement"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.42914, 0)
+mesh = SubResource("BoxMesh_5ksw0")
