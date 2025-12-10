@@ -1,10 +1,9 @@
 extends Sprite3D
 
-@export var level : PackedScene
-@export var disabled : bool
+@export var number : int
 
 func _ready():
-	$InteractionArea.disabled = disabled
+	$Label3D.text = str(number)
 
 func _on_interaction_area_activated():
-	Autoload.level_handler.set_level(level)
+	Autoload.level_handler.submit_number(number)

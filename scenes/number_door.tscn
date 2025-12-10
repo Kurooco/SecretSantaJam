@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckbu7rhdyku4a"]
+
+[ext_resource type="Texture2D" uid="uid://d2wnogngfhar5" path="res://art/2d/door.png" id="1_o0x2r"]
+[ext_resource type="Script" uid="uid://bhcmg6utu0cpn" path="res://scenes/door.gd" id="2_3ih2s"]
+[ext_resource type="PackedScene" uid="uid://dufu5qpeveefp" path="res://scenes/interaction_area.tscn" id="3_016a8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_la1wf"]
+size = Vector3(1.73449, 3.72076, 2.39355)
+
+[node name="NumberDoor" type="Sprite3D"]
+gi_mode = 2
+texture = ExtResource("1_o0x2r")
+script = ExtResource("2_3ih2s")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_016a8")]
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.162517, 0.301849, 1.23584)
+shape = SubResource("BoxShape3D_la1wf")
+debug_color = Color(0.949982, 4.23551e-06, 0.570836, 0.42)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24896, 0.132999)
+text = "1"
+font_size = 150
+
+[connection signal="activated" from="InteractionArea" to="." method="_on_interaction_area_activated"]

@@ -5,6 +5,10 @@ extends Node
 var current_level = null
 var fade_tween : Tween = null
 
+var digit_order = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+@export var room_order : Array[PackedScene]
+var current_digit = 0
+
 signal fade_ended
 
 func _ready():
@@ -39,3 +43,10 @@ func fade_in():
 	fade_tween = create_tween()
 	fade_tween.tween_property(fade, "color", transparent_color, 1)
 	fade_tween.tween_callback(fade_ended.emit)
+
+func submit_number(num:int):
+	if(num == digit_order[current_digit]):
+		current_digit += 1;
+	else:
+		current_digit = 0
+	set_level(room_order[current_digit])

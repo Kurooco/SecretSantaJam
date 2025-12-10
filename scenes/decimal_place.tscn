@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cloa0qy8m1jw8"]
+[gd_scene load_steps=9 format=3 uid="uid://cloa0qy8m1jw8"]
 
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_7sxnj"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_3d1dw"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_3d1dw"]
 [ext_resource type="PackedScene" uid="uid://chd7l1kjyg50w" path="res://scenes/dialogue_area.tscn" id="4_5ksw0"]
 [ext_resource type="PackedScene" uid="uid://ccxugkldy1hgy" path="res://scenes/pi_guy.tscn" id="5_wa6de"]
+[ext_resource type="PackedScene" uid="uid://ckbu7rhdyku4a" path="res://scenes/number_door.tscn" id="6_cwwn3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5ksw0"]
 material = ExtResource("3_3d1dw")
@@ -24,7 +25,7 @@ transform = Transform3D(-360.803, 0, 0, 0, 1.74915, 0, 0, 0, -157.731, 0, -2.429
 mesh = SubResource("BoxMesh_5ksw0")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(-360.803, 0, 0, 0, 1.74915, 0, 0, 0, -157.731, 0, 2.45365, 0)
+transform = Transform3D(-360.803, 0, 0, 0, 1.74915, 0, 0, 0, -157.731, 0, 3.09758, 0)
 mesh = SubResource("BoxMesh_5ksw0")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement"]
@@ -88,6 +89,7 @@ timeline = "timeline_test"
 automatic = true
 show_prompt = false
 one_shot = true
+disabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9345, 0.154663, 1.56204)
@@ -95,3 +97,39 @@ shape = SubResource("BoxShape3D_wa6de")
 
 [node name="PiGuy" parent="." instance=ExtResource("5_wa6de")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 37.853, -0.572794, 1.98415)
+
+[node name="NumberDoor" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.485, -0.0329249, -24.517)
+number = 1
+
+[node name="NumberDoor2" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, -18.4139)
+number = 2
+
+[node name="NumberDoor3" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, -12.621)
+number = 3
+
+[node name="NumberDoor4" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, -6.4128)
+number = 4
+
+[node name="NumberDoor5" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, -0.483498)
+number = 5
+
+[node name="NumberDoor6" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, 5.93798)
+number = 6
+
+[node name="NumberDoor7" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, 12.2155)
+number = 7
+
+[node name="NumberDoor8" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, 18.3661)
+number = 8
+
+[node name="NumberDoor9" parent="." instance=ExtResource("6_cwwn3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.3839, 0, 24.4994)
+number = 9
