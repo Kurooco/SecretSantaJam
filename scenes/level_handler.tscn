@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bugh6l1dycfm6"]
 
 [ext_resource type="Script" uid="uid://eu871lvn5tjm" path="res://scenes/level_handler.gd" id="1_l6jjb"]
-[ext_resource type="PackedScene" uid="uid://cwwksivvosaxj" path="res://scenes/world.tscn" id="2_3we7l"]
+[ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="2_n28l6"]
 [ext_resource type="Shader" uid="uid://hslswwr7i0vi" path="res://art/shaders/pixelate.gdshader" id="3_n28l6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c7bce"]
@@ -10,16 +10,23 @@ shader_parameter/pixel_size = 6
 
 [node name="LevelHandler" type="Node"]
 script = ExtResource("1_l6jjb")
-first_scene = ExtResource("2_3we7l")
+first_scene = ExtResource("2_n28l6")
 
 [node name="FadeCanvas" type="CanvasLayer" parent="."]
 layer = 10
 
 [node name="Fade" type="ColorRect" parent="FadeCanvas"]
-offset_left = -86.0
-offset_top = -54.0
-offset_right = 1279.0
-offset_bottom = 754.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1115.0
+offset_top = -656.5
+offset_right = 1115.0
+offset_bottom = 656.5
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

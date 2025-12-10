@@ -4,7 +4,7 @@ var h_rads = 0
 var v_rads = 0
 var first_person = false
 var height
-var mouse_position = Vector2.ZERO
+var mouse_position = Vector2(0, 150)
 
 @onready var detection_area = $Player/DetectionArea
 
@@ -65,3 +65,13 @@ func activate_interactive_areas():
 	for area in detection_area.get_overlapping_areas():
 		if(area is InteractionArea):
 			area.activate()
+
+
+func _on_detection_area_area_entered(area):
+	if(area is InteractionArea):
+		area.enter()
+
+
+func _on_detection_area_area_exited(area):
+	if(area is InteractionArea):
+		area.exit()

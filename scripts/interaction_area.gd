@@ -17,17 +17,20 @@ signal exited
 
 func enter():
 	is_inside = true
+	print_debug("entered!")
 	entered.emit()
 	if(automatic && (!activated_since_entering || !one_shot) && !disabled):
 		activate()
 
 func exit():
+	print_debug("exited!")
 	if(!activated_since_entering || !one_shot):
 		activated_since_entering = false
 	is_inside = false
 	exited.emit()
 
 func activate():
+	print_debug("activated!")
 	if((!activated_since_entering || !one_shot) && !disabled):
 		activated_since_entering = true
 		activated.emit()

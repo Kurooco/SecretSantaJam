@@ -123,5 +123,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8505, 2.2315, 13.832)
 texture = ExtResource("6_qfnet")
 
 [node name="Door" parent="." instance=ExtResource("8_7r4gi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2105, 2.29287, 18.7974)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52941, -15.0971, 0.514531)
 level = ExtResource("8_4mrxx")
