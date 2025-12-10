@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cloa0qy8m1jw8"]
+[gd_scene load_steps=8 format=3 uid="uid://cloa0qy8m1jw8"]
 
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_7sxnj"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_3d1dw"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_3d1dw"]
+[ext_resource type="PackedScene" uid="uid://chd7l1kjyg50w" path="res://scenes/dialogue_area.tscn" id="4_5ksw0"]
+[ext_resource type="PackedScene" uid="uid://ccxugkldy1hgy" path="res://scenes/pi_guy.tscn" id="5_wa6de"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5ksw0"]
 material = ExtResource("3_3d1dw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wa6de"]
+size = Vector3(7.74121, 5.01196, 19.0749)
 
 [node name="DecimalPlace" type="Node3D"]
 script = ExtResource("1_7sxnj")
@@ -47,7 +52,7 @@ transform = Transform3D(2.93902e-06, 1.74915, 0, 0, 2.98023e-08, 13.7689, 67.237
 mesh = SubResource("BoxMesh_5ksw0")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(1.68828e-06, 1.74915, 0, 0, 2.98023e-08, 13.7689, 38.6233, -7.64578e-08, 0, 34.8553, 2.45365, 29.924)
+transform = Transform3D(1.68828e-06, 1.74915, 0, 0, 2.98023e-08, 13.7689, 38.6233, -7.64578e-08, 0, 34.8553, 2.45365, 23.2923)
 mesh = SubResource("BoxMesh_5ksw0")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="Cement"]
@@ -75,5 +80,18 @@ transform = Transform3D(7.54979e-08, 1.27, -4.144e-07, 0, -5.55135e-08, -9.48037
 mesh = SubResource("BoxMesh_5ksw0")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement"]
-transform = Transform3D(1.68828e-06, 1.74915, 0, 0, 2.98023e-08, 13.7689, 38.6233, -7.64578e-08, 0, 34.8553, 2.45365, -27.4808)
+transform = Transform3D(1.68828e-06, 1.74915, 0, 0, 2.98023e-08, 13.7689, 38.6233, -7.64578e-08, 0, 34.8553, 2.45365, -19.9731)
 mesh = SubResource("BoxMesh_5ksw0")
+
+[node name="DialogueArea" parent="." instance=ExtResource("4_5ksw0")]
+timeline = "timeline_test"
+automatic = true
+show_prompt = false
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9345, 0.154663, 1.56204)
+shape = SubResource("BoxShape3D_wa6de")
+
+[node name="PiGuy" parent="." instance=ExtResource("5_wa6de")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 37.853, -0.572794, 1.98415)
