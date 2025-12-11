@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy7vycv02f4bq"]
+
+[ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_osu2p"]
+[ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_bkdr1"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_osu2p")
+
+[node name="PlayerController" parent="." instance=ExtResource("2_bkdr1")]
+
+[node name="Cement" type="StaticBody3D" parent="."]

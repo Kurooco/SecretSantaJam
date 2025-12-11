@@ -39,7 +39,7 @@ top_radius = 0.1
 bottom_radius = 0.1
 height = 13.881
 
-[node name="Node3D" type="Node3D"]
+[node name="PlayerController" type="Node3D"]
 rotation_edit_mode = 2
 script = ExtResource("1_uaqca")
 

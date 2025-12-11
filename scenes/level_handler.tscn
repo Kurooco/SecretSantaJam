@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eu871lvn5tjm" path="res://scenes/level_handler.gd" id="1_l6jjb"]
 [ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="2_n28l6"]
-[ext_resource type="PackedScene" uid="uid://cwwksivvosaxj" path="res://scenes/world.tscn" id="3_c7bce"]
+[ext_resource type="PackedScene" uid="uid://17brhnlvfvk8" path="res://scenes/room1.tscn" id="3_c7bce"]
 [ext_resource type="Shader" uid="uid://hslswwr7i0vi" path="res://art/shaders/pixelate.gdshader" id="3_n28l6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c7bce"]
@@ -12,7 +12,7 @@ shader_parameter/pixel_size = 6
 [node name="LevelHandler" type="Node"]
 script = ExtResource("1_l6jjb")
 first_scene = ExtResource("2_n28l6")
-room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce")])
+room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("3_c7bce")])
 
 [node name="FadeCanvas" type="CanvasLayer" parent="."]
 layer = 10
