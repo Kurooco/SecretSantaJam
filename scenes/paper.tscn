@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8qxen6giafmx"]
+
+[ext_resource type="Texture2D" uid="uid://dk1463djip7n0" path="res://art/2d/paper.png" id="1_ldlei"]
+[ext_resource type="Script" uid="uid://cican0n3j3twf" path="res://scenes/paper.gd" id="1_vas6c"]
+
+[node name="Paper" type="CanvasLayer"]
+script = ExtResource("1_vas6c")
+
+[node name="Paper" type="TextureRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1227.0
+offset_top = -148.0
+offset_bottom = 612.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_ldlei")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Paper"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 620.0
+offset_right = 1269.0
+offset_bottom = 714.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[color=gray]31[/color]415926535"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -105.0
+offset_top = -42.0
+offset_right = -20.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Q to toggle"

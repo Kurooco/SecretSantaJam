@@ -8,6 +8,7 @@ else:
 	That guy upstairs who claims to be Pi?[pause=1.0] He's a fake!
 	He doesn't have an infinite number of digits like the real Pi has! He's just trying to impress people by pretending to be Pi!
 	You know what that means, right? Since this guy only has a finite number of digits, it means that exiting this maze is actually possible!
+	[signal arg="paper"]
 	I've written down all of the digits that I've been able to visit so far. All you have to do is follow the numbers on this paper, and that should get you pretty close to the end.
 	Best of luck, random person! I believe in you!
 	set {random_guy} = true

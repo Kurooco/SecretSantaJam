@@ -91,7 +91,7 @@ mesh = SubResource("CylinderMesh_ltuqr")
 skeleton = NodePath("../..")
 
 [node name="Prompt" type="CanvasLayer" parent="."]
-layer = 10
+layer = 9
 
 [node name="Label" type="Label" parent="Prompt"]
 anchors_preset = 7
@@ -105,6 +105,7 @@ offset_right = 71.0
 offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 25
 text = "Press E"
 horizontal_alignment = 1

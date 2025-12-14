@@ -10,6 +10,7 @@ var digit_order = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
 var current_digit = 0
 
 signal fade_ended
+signal level_set
 
 func _ready():
 	Autoload.level_handler = self
@@ -25,6 +26,7 @@ func set_level(scene: PackedScene, fade = true):
 		current_level.queue_free()
 	current_level = scene.instantiate()
 	add_child(current_level)
+	level_set.emit()
 	
 	if(fade):
 		fade_in()
