@@ -10,7 +10,3 @@ func _ready():
 			col.position = child.position
 			col.rotation = child.rotation
 			$Cement.add_child(col)
-
-
-func _on_interaction_area_activated():
-	print("works!")

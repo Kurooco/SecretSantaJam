@@ -7,7 +7,7 @@ void fragment() {
 	vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz);
 	vec3 adjusted_normal = abs(normal);
 	vec3 weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z) * 3.0;
-	
+
 	vec2 uv_x = vertex.zy;
 	vec2 uv_y = vertex.xz;
 	vec2 uv_z = vertex.xy;

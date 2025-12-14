@@ -26,8 +26,14 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"random_dude": "res://dialogue/timelines/random_dude.dtl",
 "timeline_test": "res://dialogue/timelines/timeline_test.dtl"
 }
+variables={
+"random_guy": false
+}
+layout/style_list=[]
+layout/default_style="Default"
 
 [editor_plugins]
 
