@@ -9,3 +9,5 @@ script = ExtResource("1_dqaiv")
 
 [node name="NumberDoor" parent="." instance=ExtResource("1_gpwyu")]
 texture = ExtResource("2_dqaiv")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

@@ -94,7 +94,7 @@ mesh = SubResource("BoxMesh_op2f5")
 curve = SubResource("Curve3D_ggopl")
 
 [node name="MonkeyDoor" parent="Path3D" index="0" node_paths=PackedStringArray("interaction_area") instance=ExtResource("3_op2f5")]
-transform = Transform3D(0.00653365, 0.0014675, -0.999977, 0, 0.999997, 0.00146753, 0.999978, -9.58831e-06, 0.00653364, 15.9172, 0, 5.138)
+transform = Transform3D(0.00653389, 0.0014675, -0.999977, 0, 0.999997, 0.00146753, 0.999978, -9.58868e-06, 0.00653388, 15.9172, 0, 5.138)
 rotation_mode = 2
 loop = false
 interaction_area = NodePath("../../InteractionArea")
