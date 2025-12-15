@@ -3,11 +3,13 @@ extends PathFollow3D
 @export var interaction_area : InteractionArea
 @export var speed : float = 1.0
 @export var hide_at_end = false
+@export var num : int
 var running = false
 var p = 0.0
 
 func _ready():
 	$NumberDoor.texture = load("res://art/2d/door.png")
+	$NumberDoor.set_number(num)
 	interaction_area.automatic = true
 	interaction_area.show_prompt = false
 	interaction_area.one_shot = true

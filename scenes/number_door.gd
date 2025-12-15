@@ -16,3 +16,10 @@ func _ready():
 
 func _on_interaction_area_activated():
 	Autoload.level_handler.submit_number(number)
+	
+func set_number(n):
+	number = n
+	$LabelMesh.mesh = TextMesh.new()
+	$LabelMesh.mesh.text = str(number)
+	$LabelMesh.mesh.font_size = 100
+	$LabelMesh.show()
