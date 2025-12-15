@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ch6hcgsj4scip"]
+[gd_scene load_steps=4 format=3 uid="uid://ch6hcgsj4scip"]
 
-[ext_resource type="Texture2D" uid="uid://d2wnogngfhar5" path="res://art/2d/door.png" id="1_tny1a"]
+[ext_resource type="Script" uid="uid://cjlrhp05rp47s" path="res://scenes/monkey_door.gd" id="1_dqaiv"]
+[ext_resource type="PackedScene" uid="uid://ckbu7rhdyku4a" path="res://scenes/number_door.tscn" id="1_gpwyu"]
+[ext_resource type="Texture2D" uid="uid://b7u5lrsh726tu" path="res://art/2d/monkey_door.png" id="2_dqaiv"]
 
 [node name="MonkeyDoor" type="PathFollow3D"]
+script = ExtResource("1_dqaiv")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("1_tny1a")
+[node name="NumberDoor" parent="." instance=ExtResource("1_gpwyu")]
+texture = ExtResource("2_dqaiv")

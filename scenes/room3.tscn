@@ -1,12 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn1wkc0w0qlad"]
+[gd_scene load_steps=8 format=3 uid="uid://bn1wkc0w0qlad"]
 
 [ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_4aq8u"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="2_3r3bf"]
+[ext_resource type="PackedScene" uid="uid://ch6hcgsj4scip" path="res://scenes/monkey_door.tscn" id="3_op2f5"]
+[ext_resource type="PackedScene" uid="uid://dufu5qpeveefp" path="res://scenes/interaction_area.tscn" id="4_17neo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_op2f5"]
 material = ExtResource("2_3r3bf")
 
+[sub_resource type="Curve3D" id="Curve3D_ggopl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 15.9172, 0, 5.138, 0, 0, 0, 0, 0, 0, 29.3194, -0.0196686, 5.05043, 0, 0, 0, 0, 0, 0, 44.4634, -0.0317841, 3.92401, 0, 0, 0, 0, 0, 0, 65.5822, -0.0317764, 0.0185261, 0, 0, 0, 0, 0, 0, 58.079, -0.027504, -2.3145, 0, 0, 0, 0, 0, 0, 29.9335, -0.0203857, -12.8515, 0, 0, 0, 0, 0, 0, 21.0736, -0.0132675, -7.34494, 0, 0, 0, 0, 0, 0, 13.0838, -0.00282288, -15.1889, 0, 0, 0, 0, 0, 0, 6.16617, -0.00163269, -26.1964, 0, 0, 0, 0, 0, 0, -3.0946, 0.00572968, -27.2441, 0, 0, 0, 0, 0, 0, -5.68583, 0.0100098, -5.09825),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4x0d7"]
+size = Vector3(1, 7.53656, 9.30286)
+
 [node name="Node3D" instance=ExtResource("1_4aq8u")]
+
+[node name="PlayerController" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.80816)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cement" index="0"]
 transform = Transform3D(-126.325, 0, 0, 0, 1, 0, 0, 0, -57.2799, 21.5107, -2.39985, 0.437962)
@@ -67,3 +82,19 @@ mesh = SubResource("BoxMesh_op2f5")
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="Cement" index="14"]
 transform = Transform3D(-62.8375, -3.55271e-15, 3.38813e-21, 0, -4.37114e-08, -21.297, 0, -1, 9.3092e-07, 22.027, -2.39985, -28.6311)
 mesh = SubResource("BoxMesh_op2f5")
+
+[node name="Path3D" type="Path3D" parent="." index="2"]
+curve = SubResource("Curve3D_ggopl")
+
+[node name="MonkeyDoor" parent="Path3D" index="0" node_paths=PackedStringArray("interaction_area") instance=ExtResource("3_op2f5")]
+transform = Transform3D(0.00653365, 0.0014675, -0.999977, 0, 0.999997, 0.00146753, 0.999978, -9.58831e-06, 0.00653364, 15.9172, 0, 5.138)
+rotation_mode = 2
+loop = false
+interaction_area = NodePath("../../InteractionArea")
+speed = 0.15
+
+[node name="InteractionArea" parent="." index="3" instance=ExtResource("4_17neo")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5765, 1.39505, 4.15143)
+shape = SubResource("BoxShape3D_4x0d7")
