@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch6hcgsj4scip"]
+
+[ext_resource type="Texture2D" uid="uid://d2wnogngfhar5" path="res://art/2d/door.png" id="1_tny1a"]
+
+[node name="MonkeyDoor" type="PathFollow3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_tny1a")

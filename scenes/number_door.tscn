@@ -13,6 +13,7 @@ font_size = 100
 
 [node name="NumberDoor" type="Sprite3D"]
 gi_mode = 2
+shaded = true
 texture = ExtResource("1_o0x2r")
 script = ExtResource("2_o0x2r")
 
