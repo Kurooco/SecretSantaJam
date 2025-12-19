@@ -1,6 +1,7 @@
 if {random_guy} == true:
 	You've got this, random person! Just follow the digits on the paper I gave you, and you should be golden!
 else:
+	[signal arg_type="dict" arg="{"music":"res://sounds/music/RandomDude.wav"}"]
 	Hey there.
 	As you can see, things didn't turn out too well for me. I took to many wrong turns, and now I can't go on.
 	But you look like you're just starting your journey!
@@ -12,3 +13,4 @@ else:
 	I've written down all of the digits that I've been able to visit so far. All you have to do is follow the numbers on this paper, and that should get you pretty close to the end.
 	Best of luck, random person! I believe in you!
 	set {random_guy} = true
+	[signal arg_type="dict" arg="{"music":"res://sounds/music/Creepy Ambience (Damp).wav"}"]

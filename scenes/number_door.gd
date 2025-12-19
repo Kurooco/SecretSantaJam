@@ -15,6 +15,7 @@ func _ready():
 		$LabelMesh.show()
 
 func _on_interaction_area_activated():
+	$AudioStreamPlayer3D.play()
 	Autoload.level_handler.submit_number(number)
 	
 func set_number(n):

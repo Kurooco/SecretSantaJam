@@ -15,6 +15,7 @@ signal level_set
 func _ready():
 	Autoload.level_handler = self
 	set_level(first_scene, false)
+	MusicHandler.play("res://sounds/music/Creepy Ambience (Damp).wav")
 	
 func set_level(scene: PackedScene, fade = true):
 	if(fade):

@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bugh6l1dycfm6"]
+[gd_scene load_steps=11 format=3 uid="uid://bugh6l1dycfm6"]
 
 [ext_resource type="Script" uid="uid://eu871lvn5tjm" path="res://scenes/level_handler.gd" id="1_l6jjb"]
+[ext_resource type="PackedScene" uid="uid://c3ou00oci4yoo" path="res://scenes/final_room.tscn" id="2_jxtpv"]
 [ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="2_n28l6"]
 [ext_resource type="PackedScene" uid="uid://bn1wkc0w0qlad" path="res://scenes/room3.tscn" id="2_ylg7y"]
 [ext_resource type="PackedScene" uid="uid://17brhnlvfvk8" path="res://scenes/room1.tscn" id="3_c7bce"]
@@ -15,7 +16,7 @@ shader_parameter/pixel_size = 6
 
 [node name="LevelHandler" type="Node"]
 script = ExtResource("1_l6jjb")
-first_scene = ExtResource("2_ylg7y")
+first_scene = ExtResource("2_jxtpv")
 room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("4_4njay"), ExtResource("3_c7bce"), ExtResource("6_2r54h"), ExtResource("2_ylg7y")])
 
 [node name="FadeCanvas" type="CanvasLayer" parent="."]

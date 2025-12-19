@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch6hcgsj4scip"]
+[gd_scene load_steps=6 format=3 uid="uid://ch6hcgsj4scip"]
 
 [ext_resource type="Script" uid="uid://cjlrhp05rp47s" path="res://scenes/monkey_door.gd" id="1_dqaiv"]
 [ext_resource type="PackedScene" uid="uid://ckbu7rhdyku4a" path="res://scenes/number_door.tscn" id="1_gpwyu"]
 [ext_resource type="Texture2D" uid="uid://b7u5lrsh726tu" path="res://art/2d/monkey_door.png" id="2_dqaiv"]
+[ext_resource type="AudioStream" uid="uid://btmvmmlhcc0au" path="res://sounds/Pwoooosh.wav" id="4_thyyj"]
+[ext_resource type="AudioStream" uid="uid://4qcgluovrf1d" path="res://sounds/Lighthit.wav" id="5_s8c4l"]
 
 [node name="MonkeyDoor" type="PathFollow3D"]
 script = ExtResource("1_dqaiv")
@@ -11,3 +13,9 @@ script = ExtResource("1_dqaiv")
 texture = ExtResource("2_dqaiv")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_thyyj")
+max_distance = 50.0
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_s8c4l")
+max_distance = 50.0

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6eex60frvfjq"]
+
+[ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_3j86r"]
+[ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="2_0weu7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_uwnbk"]
+material = ExtResource("2_0weu7")
+
+[node name="Node3D" instance=ExtResource("1_3j86r")]
+
+[node name="PlayerController" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.66737, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cement" index="0"]
+transform = Transform3D(-8.91216, 0, 0, 0, 1, 0, 0, 0, -10.5433, 0, 0, 0)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement" index="1"]
+transform = Transform3D(-30.2214, 0, 0, 0, 1, 0, 0, 0, 68.0332, -6.57409, -2.67773, 7.45239)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="2"]
+transform = Transform3D(1.32102e-06, -1, 0, -30.2214, -4.37114e-08, 0, 0, 0, 48.8282, 4.11358, -2.67773, 19.3358)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="3"]
+transform = Transform3D(1.32102e-06, -1, 0, -30.2214, -4.37114e-08, 0, 0, 0, 48.8282, -15.2728, -2.67773, 43.4748)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="4"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 38.0937, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -1.66513e-06, -3.87326, -2.67773, -4.76186)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement" index="5"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 38.0937, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -1.66513e-06, -3.87326, -2.67773, 39.456)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="6"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 16.6449, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -7.27571e-07, -13.6483, -2.67773, 19.2318)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement" index="7"]
+transform = Transform3D(-8.91216, 0, 0, 0, 0.965926, 2.7288, 0, 0.258819, -10.184, 0, -1.45398, 10.4761)
+mesh = SubResource("BoxMesh_uwnbk")

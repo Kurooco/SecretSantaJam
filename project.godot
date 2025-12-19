@@ -19,6 +19,7 @@ config/icon="uid://c7bd0muamkuqp"
 
 Autoload="*res://scripts/Autoload.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+MusicHandler="*res://scripts/MusicHandler.gd"
 
 [dialogic]
 

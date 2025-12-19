@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckbu7rhdyku4a"]
+[gd_scene load_steps=7 format=3 uid="uid://ckbu7rhdyku4a"]
 
 [ext_resource type="Texture2D" uid="uid://d2wnogngfhar5" path="res://art/2d/door.png" id="1_o0x2r"]
 [ext_resource type="Script" uid="uid://b2l17vjgpida0" path="res://scenes/number_door.gd" id="2_o0x2r"]
 [ext_resource type="PackedScene" uid="uid://dufu5qpeveefp" path="res://scenes/interaction_area.tscn" id="3_016a8"]
+[ext_resource type="AudioStream" uid="uid://bqcy6amywicdv" path="res://sounds/Kuh.wav" id="4_3ih2s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_la1wf"]
 size = Vector3(1.73449, 3.72076, 1.73962)
@@ -34,5 +35,8 @@ font_size = 150
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24239, 0)
 visible = false
 mesh = SubResource("TextMesh_o0x2r")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_3ih2s")
 
 [connection signal="activated" from="InteractionArea" to="." method="_on_interaction_area_activated"]

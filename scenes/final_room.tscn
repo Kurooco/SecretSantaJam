@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ou00oci4yoo"]
+
+[ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_l12df"]
+[ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="2_l5yvb"]
+[ext_resource type="PackedScene" uid="uid://ccxugkldy1hgy" path="res://scenes/pi_guy.tscn" id="3_l12df"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nt4v7"]
+material = ExtResource("2_l5yvb")
+
+[node name="Node3D" instance=ExtResource("1_l12df")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cement" index="0"]
+transform = Transform3D(-46.1967, 0, 0, 0, 1, 0, 0, 0, -16.1097, 8.88417, -2.17468, 0)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement" index="1"]
+transform = Transform3D(-175.934, 0, 0, 0, 1, 0, 0, 0, -16.1097, 30.1398, -47.2449, -0.328229)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="2"]
+transform = Transform3D(2.01932e-06, 1, 0, 46.1967, -4.37114e-08, 0, 0, 0, -16.1097, 30.8849, -25.0119, 0)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="3"]
+transform = Transform3D(3.04089e-06, 1, 0, 69.5674, -4.37114e-08, 0, 0, 0, -16.1097, 43.0135, -6.26053, 0)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="4"]
+transform = Transform3D(-46.1967, 0, 0, 0, 1, 0, 0, 0, -16.1097, 8.88417, 4.28962, 0)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement" index="5"]
+transform = Transform3D(8.31207e-07, -1, 0, -19.0158, -4.37114e-08, 0, 0, 0, -16.1097, -7.46033, -2.17468, 0)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement" index="6"]
+transform = Transform3D(5.64161e-13, 4.37114e-08, 223.632, 103.262, -4.37114e-08, 0, -4.51372e-06, -1, 9.77525e-06, 13.5827, -2.17468, -5.23635)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="7"]
+transform = Transform3D(6.82774e-13, 4.37114e-08, 214.958, 124.972, -4.37114e-08, 0, -5.46272e-06, -1, 9.39613e-06, 13.5827, -2.17468, 5.30835)
+mesh = SubResource("BoxMesh_nt4v7")
+
+[node name="PiGuy" parent="." index="2" instance=ExtResource("3_l12df")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 86.8756, -45.839, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 87.2322, 0, 0)
+spot_range = 55.7133
+spot_attenuation = 0.56
+spot_angle = 15.88
+spot_angle_attenuation = 0.392292

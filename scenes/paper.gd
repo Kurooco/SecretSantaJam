@@ -32,7 +32,7 @@ func update():
 	numbers.text = text
 
 func enable(arg):
-	if(arg == "paper"):
+	if(arg is String and arg == "paper"):
 		$Label.show()
 		enabled = true
 		update()

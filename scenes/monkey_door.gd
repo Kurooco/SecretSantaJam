@@ -16,11 +16,15 @@ func _ready():
 	interaction_area.activated.connect(run)
 
 func run():
+	$AudioStreamPlayer3D.play()
+	$AudioStreamPlayer3D2.play()
 	running = true
 	$NumberDoor.texture = load("res://art/2d/monkey_door.png")
 	
 func _process(delta):
 	if(running):
 		progress_ratio += delta*speed
-		if(progress_ratio >= 1 && hide_at_end):
-			hide()
+		if(progress_ratio >= 1):
+			$AudioStreamPlayer3D2.stop()
+			if(hide_at_end):
+				queue_free()

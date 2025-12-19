@@ -1,0 +1,17 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://brseih5li8sck"]
+
+[ext_resource type="Texture2D" uid="uid://du0ghkdg4xvxq" path="res://art/textures/960px-Cascading_Milky_Way.jpg" id="1_lnydp"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_uwnbk"]
+panorama = ExtResource("1_lnydp")
+filter = false
+
+[sub_resource type="Sky" id="Sky_uv3hv"]
+sky_material = SubResource("PanoramaSkyMaterial_uwnbk")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_uv3hv")
+ambient_light_source = 3
+ambient_light_color = Color(0.145098, 0.0705882, 1, 1)
+ambient_light_energy = 2.33

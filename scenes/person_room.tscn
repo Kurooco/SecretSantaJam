@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://byv81ea3cgh20"]
+[gd_scene load_steps=6 format=3 uid="uid://byv81ea3cgh20"]
 
 [ext_resource type="PackedScene" uid="uid://17brhnlvfvk8" path="res://scenes/room1.tscn" id="1_am7qi"]
 [ext_resource type="Texture2D" uid="uid://c22olks1d1csi" path="res://art/2d/random_dude.png" id="2_rxh4q"]
 [ext_resource type="PackedScene" uid="uid://chd7l1kjyg50w" path="res://scenes/dialogue_area.tscn" id="3_a7oy3"]
+[ext_resource type="Script" uid="uid://h1e8sup20frl" path="res://scenes/random_dude.gd" id="3_dkcio"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a7oy3"]
 size = Vector3(1.3335, 2.10229, 1.60773)
@@ -12,6 +13,7 @@ size = Vector3(1.3335, 2.10229, 1.60773)
 [node name="Sprite3D" type="Sprite3D" parent="." index="12"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -1.44411, 0)
 texture = ExtResource("2_rxh4q")
+script = ExtResource("3_dkcio")
 
 [node name="DialogueArea" parent="Sprite3D" index="0" instance=ExtResource("3_a7oy3")]
 timeline = "random_dude"
@@ -19,3 +21,5 @@ timeline = "random_dude"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/DialogueArea" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.538574, 0.378052, 0.303864)
 shape = SubResource("BoxShape3D_a7oy3")
+
+[connection signal="activated" from="Sprite3D/DialogueArea" to="Sprite3D" method="_on_dialogue_area_activated"]
