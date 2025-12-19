@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhf61ba3mrm6f"]
+
+[ext_resource type="Script" uid="uid://dxjfctwdfndg1" path="res://hand.gd" id="1_bfasp"]
+[ext_resource type="PackedScene" uid="uid://bvvsl4g4w3t8t" path="res://scenes/finger.tscn" id="2_e75s6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wymn8"]
+
+[node name="Hand" type="Node3D"]
+script = ExtResource("1_bfasp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.15951, 0, 0, 0, -2.86943, 0, 0, 0, 1, 0, 0.333448, 0)
+mesh = SubResource("BoxMesh_wymn8")
+
+[node name="Node3D" parent="." instance=ExtResource("2_e75s6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0986859, 1.67043, 0.360385)
+
+[node name="Node3D2" parent="." instance=ExtResource("2_e75s6")]
+transform = Transform3D(0.992953, -0.118508, 0, 0.118508, 0.992953, 0, 0, 0, 1, -1.03568, 1.4288, 0.366907)
+
+[node name="Node3D5" parent="." instance=ExtResource("2_e75s6")]
+transform = Transform3D(0.468652, -0.759952, 0, 1.42491, 0.249947, 0, 0, 0, 1, -1.26728, 0.318017, 0.00988698)
+
+[node name="Node3D3" parent="." instance=ExtResource("2_e75s6")]
+transform = Transform3D(0.875037, 0.210498, 0, -0.210498, 0.875037, 0, 0, 0, 0.9, 0.975299, 1.39498, 0.371779)
+
+[node name="Node3D4" parent="." instance=ExtResource("2_e75s6")]
+transform = Transform3D(0.475654, 0.513569, 0, -0.513569, 0.475654, 0, 0, 0, 0.7, 1.24897, 0.819623, 0.393314)

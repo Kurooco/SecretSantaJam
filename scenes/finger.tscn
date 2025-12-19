@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvvsl4g4w3t8t"]
+
+[ext_resource type="Script" uid="uid://jwwn348ao10n" path="res://scenes/finger.gd" id="1_ple3j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_knt1r"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ple3j"]
+size = Vector3(1, 1.5, 1)
+
+[node name="BottomJoint" type="Node3D"]
+script = ExtResource("1_ple3j")
+
+[node name="Bottom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04548, -0.354119)
+mesh = SubResource("BoxMesh_knt1r")
+
+[node name="TopJoint" type="Node3D" parent="Bottom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99546, 0.496696)
+
+[node name="Top" type="MeshInstance3D" parent="Bottom/TopJoint"]
+transform = Transform3D(1, 0, 0, 0, 0.957415, -0.288714, 0, 0.288714, 0.957415, 0, 0.875277, -0.271681)
+rotation_edit_mode = 2
+mesh = SubResource("BoxMesh_ple3j")

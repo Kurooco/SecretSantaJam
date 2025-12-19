@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3ou00oci4yoo"]
+[gd_scene load_steps=6 format=3 uid="uid://c3ou00oci4yoo"]
 
 [ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_l12df"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="2_l5yvb"]
 [ext_resource type="PackedScene" uid="uid://ccxugkldy1hgy" path="res://scenes/pi_guy.tscn" id="3_l12df"]
+[ext_resource type="PackedScene" uid="uid://dhf61ba3mrm6f" path="res://hand.tscn" id="4_l5yvb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nt4v7"]
 material = ExtResource("2_l5yvb")
@@ -50,3 +51,6 @@ spot_range = 55.7133
 spot_attenuation = 0.56
 spot_angle = 15.88
 spot_angle_attenuation = 0.392292
+
+[node name="Hand" parent="." index="4" instance=ExtResource("4_l5yvb")]
+transform = Transform3D(-0.0713582, 0, -0.997451, 0, 1, 0, 0.997451, 0, -0.0713582, 6.04022, 0, 0)
