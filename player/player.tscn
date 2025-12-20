@@ -15,8 +15,9 @@ size = Vector3(1, 2.3, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rkbax"]
 size = Vector3(1, 2.2265, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_g1dw6"]
-size = Vector3(2.98877, 4.6617, 2.72632)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g1dw6"]
+radius = 1.91838
+height = 7.55667
 
 [sub_resource type="PrismMesh" id="PrismMesh_hgnx3"]
 
@@ -59,8 +60,8 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/HandDetection"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.144775, 0.304543, -0.0628662)
-shape = SubResource("BoxShape3D_g1dw6")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0331421, 0.304543, 0.101898)
+shape = SubResource("CapsuleShape3D_g1dw6")
 debug_color = Color(0.977182, 0, 0.406114, 0.42)
 
 [node name="CameraPivot" type="Node3D" parent="."]

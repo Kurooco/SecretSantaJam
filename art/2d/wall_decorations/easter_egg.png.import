@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://okxss5od34d"
-path.s3tc="res://.godot/imported/easter_egg.png-bb3032f52b439eb17f4bfee1b8e96141.s3tc.ctex"
+path.s3tc="res://.godot/imported/easter_egg.png-0e937ed380d2dd765cbc31b7ca576787.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/2d/easter_egg.png"
-dest_files=["res://.godot/imported/easter_egg.png-bb3032f52b439eb17f4bfee1b8e96141.s3tc.ctex"]
+source_file="res://art/2d/wall_decorations/easter_egg.png"
+dest_files=["res://.godot/imported/easter_egg.png-0e937ed380d2dd765cbc31b7ca576787.s3tc.ctex"]
 
 [params]
 

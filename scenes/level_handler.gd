@@ -7,7 +7,7 @@ var fade_tween : Tween = null
 var restarting = false
 
 var digit_order   = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
-var e_digit_order = [2, 7, 1, 8, 2, 8, 1]
+var e_digit_order = [2, 7, 1, 8, 2, 8, 1, 8]
 @export var room_order : Array[PackedScene]
 var current_digit = 0
 var e_route = 0

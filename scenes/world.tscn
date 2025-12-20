@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_qfnet"]
 [ext_resource type="Texture2D" uid="uid://crrirywkyelj2" path="res://art/textures/DSC_0216.JPG" id="4_qfnet"]
-[ext_resource type="Texture2D" uid="uid://b8xkho4rmnowb" path="res://art/2d/keep_out.png" id="6_qfnet"]
+[ext_resource type="Texture2D" uid="uid://b8xkho4rmnowb" path="res://art/2d/wall_decorations/keep_out.png" id="6_qfnet"]
 [ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://ddpo0het20fbc" path="res://scenes/door.tscn" id="8_7r4gi"]
 

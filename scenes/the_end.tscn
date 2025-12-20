@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ldnjkvnp3x6t"]
+[gd_scene load_steps=8 format=3 uid="uid://ldnjkvnp3x6t"]
 
 [ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_a842l"]
 [ext_resource type="Environment" uid="uid://kny8yxs4aqbw" path="res://resources/peaceful_environ.tres" id="2_2x4e2"]
+[ext_resource type="PackedScene" uid="uid://cjp5eahpl1mqi" path="res://level_music.tscn" id="3_wtwb0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2x4e2"]
 albedo_color = Color(0.408329, 0.408329, 0.408329, 1)
@@ -56,3 +57,6 @@ light_indirect_energy = 3.118
 light_volumetric_fog_energy = 2.294
 shadow_enabled = true
 shadow_blur = 1.294
+
+[node name="LevelMusic" parent="." index="6" instance=ExtResource("3_wtwb0")]
+music = "res://sounds/music/PI.wav"

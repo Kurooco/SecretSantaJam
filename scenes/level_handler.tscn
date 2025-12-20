@@ -17,7 +17,7 @@ shader_parameter/pixel_size = 6
 [node name="LevelHandler" type="Node"]
 script = ExtResource("1_l6jjb")
 first_scene = ExtResource("2_jxtpv")
-room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("4_4njay"), ExtResource("3_c7bce"), ExtResource("6_2r54h"), ExtResource("2_ylg7y"), null])
+room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("4_4njay"), ExtResource("3_c7bce"), ExtResource("6_2r54h"), ExtResource("2_ylg7y"), ExtResource("2_jxtpv")])
 
 [node name="FadeCanvas" type="CanvasLayer" parent="."]
 layer = 10
