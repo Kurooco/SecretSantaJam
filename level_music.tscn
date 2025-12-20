@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjp5eahpl1mqi"]
+
+[ext_resource type="Script" uid="uid://dvkkfkgv6fd18" path="res://level_music.gd" id="1_m242i"]
+
+[node name="LevelMusic" type="Node"]
+script = ExtResource("1_m242i")

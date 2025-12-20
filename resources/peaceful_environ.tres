@@ -1,0 +1,17 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://kny8yxs4aqbw"]
+
+[ext_resource type="Texture2D" uid="uid://dmbc6nhogyd7f" path="res://art/2d/blue_sky.png" id="1_oqrli"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2jfs8"]
+panorama = ExtResource("1_oqrli")
+
+[sub_resource type="Sky" id="Sky_fpimk"]
+sky_material = SubResource("PanoramaSkyMaterial_2jfs8")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_fpimk")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 3.3
+reflected_light_source = 2

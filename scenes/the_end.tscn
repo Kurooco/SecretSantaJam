@@ -1,27 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://ldnjkvnp3x6t"]
+[gd_scene load_steps=7 format=3 uid="uid://ldnjkvnp3x6t"]
 
 [ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_a842l"]
-[ext_resource type="Texture2D" uid="uid://dmbc6nhogyd7f" path="res://art/2d/blue_sky.png" id="2_2x4e2"]
+[ext_resource type="Environment" uid="uid://kny8yxs4aqbw" path="res://resources/peaceful_environ.tres" id="2_2x4e2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2x4e2"]
 albedo_color = Color(0.408329, 0.408329, 0.408329, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wtwb0"]
 material = SubResource("StandardMaterial3D_2x4e2")
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2jfs8"]
-panorama = ExtResource("2_2x4e2")
-
-[sub_resource type="Sky" id="Sky_fpimk"]
-sky_material = SubResource("PanoramaSkyMaterial_2jfs8")
-
-[sub_resource type="Environment" id="Environment_pugnu"]
-background_mode = 2
-sky = SubResource("Sky_fpimk")
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 3.3
-reflected_light_source = 2
 
 [sub_resource type="TextMesh" id="TextMesh_2x4e2"]
 text = "The End"
@@ -54,7 +40,7 @@ transform = Transform3D(-5.19398e-06, 0, -11.0278, 0, -15.6427, 0, 118.824, 0, -
 mesh = SubResource("BoxMesh_wtwb0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
-environment = SubResource("Environment_pugnu")
+environment = ExtResource("2_2x4e2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5.07572, -9.58248)

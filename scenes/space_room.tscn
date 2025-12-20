@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0wqe1yp3v7jy"]
+[gd_scene load_steps=14 format=3 uid="uid://d0wqe1yp3v7jy"]
 
 [ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_lrxj6"]
 [ext_resource type="Texture2D" uid="uid://cux57gjjolc24" path="res://art/2d/exit_door.png" id="2_7ij47"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://i4xmsli152gm" path="res://art/2d/pi.png" id="4_w3xed"]
 [ext_resource type="PackedScene" uid="uid://c5u8817ja2oi4" path="res://dialogic_signal_handler.tscn" id="5_ivnu5"]
 [ext_resource type="PackedScene" uid="uid://chd7l1kjyg50w" path="res://scenes/dialogue_area.tscn" id="5_nt6jf"]
+[ext_resource type="PackedScene" uid="uid://cjp5eahpl1mqi" path="res://level_music.tscn" id="10_c0fbs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ij47"]
 size = Vector3(5.47525, 3.72888, 2.13458)
@@ -22,7 +23,7 @@ size = Vector3(8.505, 9.69769, 18.7156)
 [node name="SpaceRoom" instance=ExtResource("1_lrxj6")]
 
 [node name="PlayerController" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 360.566, 101.713, -44.1515)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0278, 0.219895, 1.97745)
 
 [node name="ExitDoor" type="Sprite3D" parent="Cement" index="0"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 375.946, 97.6546, -47.4783)
@@ -203,6 +204,9 @@ one_shot = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueArea" index="0"]
 transform = Transform3D(0.68986, 0, 0.723943, 0, 1, 0, -0.723943, 0, 0.68986, 370.074, 97.7617, -52.3406)
 shape = SubResource("BoxShape3D_6dp1k")
+
+[node name="LevelMusic" parent="." index="5" instance=ExtResource("10_c0fbs")]
+music = "res://sounds/music/Meditating On the Many Digits Of Pi.wav"
 
 [connection signal="activated" from="Cement/ExitDoor/InteractionArea" to="Cement/ExitDoor" method="_on_interaction_area_activated"]
 [connection signal="matched" from="Cement/ExitDoor/DialogicSignalHandler" to="Cement/ExitDoor" method="_on_dialogic_signal_handler_matched"]

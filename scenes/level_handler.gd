@@ -6,16 +6,19 @@ var current_level = null
 var fade_tween : Tween = null
 var restarting = false
 
-var digit_order = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+var digit_order   = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+var e_digit_order = [2, 7, 1, 8, 2, 8, 1]
 @export var room_order : Array[PackedScene]
 var current_digit = 0
+var e_route = 0
+
 signal fade_ended
 signal level_set
 
 func _ready():
+	MusicHandler.play("res://sounds/music/Creepy Ambience (Damp).wav")
 	Autoload.level_handler = self
 	set_level(first_scene, false)
-	MusicHandler.play("res://sounds/music/Creepy Ambience (Damp).wav")
 	
 func set_level(scene: PackedScene, fade = true):
 	if(fade):
@@ -49,13 +52,27 @@ func fade_in():
 	fade_tween.tween_callback(fade_ended.emit)
 
 func submit_number(num:int):
-	if(num == digit_order[current_digit]):
+	#Check e route
+	if(current_digit == 0 && e_route == 0):
+		e_route = 1 if num == 2 else -1
+	
+	var order = digit_order if e_route < 1 else e_digit_order
+	
+	if(current_digit >= order.size() || num == order[current_digit]):
 		current_digit += 1;
 	else:
 		current_digit = 0
-	set_level(room_order[current_digit])
+		e_route = 0
+	
+	if(e_route == 1 && current_digit >= e_digit_order.size()):
+		set_level(load("res://scenes/e_room.tscn"))
+	else:
+		set_level(room_order[current_digit])
 
 func restart():
 	if(!restarting):
 		restarting = true
-		set_level(room_order[current_digit])
+		if(e_route == 1 && current_digit >= e_digit_order.size()):
+			set_level(load("res://scenes/e_room.tscn"))
+		else:
+			set_level(room_order[current_digit])
