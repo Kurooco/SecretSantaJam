@@ -2,7 +2,7 @@ extends Node3D
 
 var closing = false
 @onready var bottom = $Bottom
-@onready var top = $Bottom/Node/Top
+@onready var top = $Bottom/TopJoint/Top
 @onready var top_joint = $Bottom/TopJoint
 @export var top_speed : float = 1.5
 @export var bottom_speed : float = 1.0

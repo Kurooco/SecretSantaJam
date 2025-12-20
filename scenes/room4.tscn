@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6eex60frvfjq"]
+[gd_scene load_steps=6 format=3 uid="uid://c6eex60frvfjq"]
 
 [ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_3j86r"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="2_0weu7"]
+[ext_resource type="PackedScene" uid="uid://ckbu7rhdyku4a" path="res://scenes/number_door.tscn" id="3_0weu7"]
+[ext_resource type="PackedScene" uid="uid://esaxckvyvjnc" path="res://scenes/fighting_hand.tscn" id="4_uwnbk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_uwnbk"]
 material = ExtResource("2_0weu7")
@@ -19,26 +21,57 @@ mesh = SubResource("BoxMesh_uwnbk")
 transform = Transform3D(-30.2214, 0, 0, 0, 1, 0, 0, 0, 68.0332, -6.57409, -2.67773, 7.45239)
 mesh = SubResource("BoxMesh_uwnbk")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="2"]
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Cement" index="2"]
+transform = Transform3D(-30.2214, 0, 0, 0, 1, 0, 0, 0, 68.0332, -65.5401, -10.3506, 7.45239)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Cement" index="3"]
+transform = Transform3D(-29.1916, -0.258819, 0, -7.82187, 0.965926, 0, 0, 0, 68.0332, -36.038, -6.59958, 7.45239)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="4"]
 transform = Transform3D(1.32102e-06, -1, 0, -30.2214, -4.37114e-08, 0, 0, 0, 48.8282, 4.11358, -2.67773, 19.3358)
 mesh = SubResource("BoxMesh_uwnbk")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="3"]
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="5"]
 transform = Transform3D(1.32102e-06, -1, 0, -30.2214, -4.37114e-08, 0, 0, 0, 48.8282, -15.2728, -2.67773, 43.4748)
 mesh = SubResource("BoxMesh_uwnbk")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="4"]
-transform = Transform3D(4.96244e-14, 4.37114e-08, 38.0937, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -1.66513e-06, -3.87326, -2.67773, -4.76186)
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Cement" index="6"]
+transform = Transform3D(1.32102e-06, -1, 0, -30.2214, -4.37114e-08, 0, 0, 0, 48.8282, -50.3313, -2.67773, 43.4748)
 mesh = SubResource("BoxMesh_uwnbk")
 
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement" index="5"]
-transform = Transform3D(4.96244e-14, 4.37114e-08, 38.0937, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -1.66513e-06, -3.87326, -2.67773, 39.456)
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="7"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 60.6844, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -2.6526e-06, -20.6322, -2.67773, -4.76186)
 mesh = SubResource("BoxMesh_uwnbk")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="6"]
-transform = Transform3D(4.96244e-14, 4.37114e-08, 16.6449, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -7.27571e-07, -13.6483, -2.67773, 19.2318)
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement" index="8"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 122.063, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -5.33555e-06, -3.87326, -2.67773, 39.456)
 mesh = SubResource("BoxMesh_uwnbk")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement" index="7"]
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="9"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 45.0167, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -1.96774e-06, -24.8287, -2.67773, 19.2318)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Cement" index="10"]
+transform = Transform3D(4.96244e-14, 4.37114e-08, 45.0167, -30.2214, -4.37114e-08, 0, -1.32102e-06, 1, -1.96774e-06, -73.1841, -2.67773, 19.2318)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Cement" index="11"]
+transform = Transform3D(-2.28091e-14, 4.37114e-08, 9.9332, 13.8908, -4.37114e-08, 0, 6.07186e-07, 1, -4.34194e-07, -60.0428, -11.1436, 13.0881)
+mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement" index="12"]
 transform = Transform3D(-8.91216, 0, 0, 0, 0.965926, 2.7288, 0, 0.258819, -10.184, 0, -1.45398, 10.4761)
 mesh = SubResource("BoxMesh_uwnbk")
+
+[node name="NumberDoor" parent="." index="2" instance=ExtResource("3_0weu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.63485, 0, 19.8096)
+
+[node name="NumberDoor2" parent="." index="3" instance=ExtResource("3_0weu7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.335, 0, 27.6462)
+number = 2
+
+[node name="FightingHand" parent="." index="4" instance=ExtResource("4_uwnbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.04, 0, 0.38882)
+advance_speed = 20.0

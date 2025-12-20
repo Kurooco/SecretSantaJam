@@ -11,7 +11,7 @@ height = 3.449
 script = ExtResource("1_bfasp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.90563, 0, 3.17698e-08, 0, 1.36017, 0, -1.66595e-07, 0, -0.363404, 0, 0.578428, 0.216368)
+transform = Transform3D(-1.90563, 0, 7.69e-08, 0, 1.36017, 0, -1.66595e-07, 0, -0.879634, 0, 0.578428, -0.0194796)
 mesh = SubResource("CapsuleMesh_bfasp")
 
 [node name="Node3D" parent="." instance=ExtResource("2_e75s6")]

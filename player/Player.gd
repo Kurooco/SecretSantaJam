@@ -7,6 +7,7 @@ const JUMP_VELOCITY = 14.5
 
 var move_vec_x = Vector2(1, 0)
 var move_vec_z = Vector2(1, 0)
+var disabled = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -18,7 +19,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and Dialogic.current_timeline == null:
+	if !disabled && Input.is_action_just_pressed("ui_accept") and is_on_floor() and Dialogic.current_timeline == null:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -26,7 +27,7 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var speed = RUN_SPEED if Input.is_action_pressed("run") else SPEED
-	if direction and Dialogic.current_timeline == null:
+	if direction and Dialogic.current_timeline == null and !disabled:
 		velocity.x = direction.x * speed * move_vec_x.x
 		velocity.z = direction.x * speed * move_vec_x.y
 		

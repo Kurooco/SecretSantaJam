@@ -23,7 +23,7 @@ size = Vector3(8.505, 9.69769, 18.7156)
 [node name="SpaceRoom" instance=ExtResource("1_lrxj6")]
 
 [node name="PlayerController" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0278, 0.219895, 1.97745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02404, 0.805112, 1.69708)
 
 [node name="ExitDoor" type="Sprite3D" parent="Cement" index="0"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 375.946, 97.6546, -47.4783)
@@ -152,39 +152,43 @@ mesh = SubResource("BoxMesh_w3xed")
 transform = Transform3D(-25.2287, 0, 0, 0, -4.37114e-08, 98.5432, 0, -1, -4.30746e-06, 0, 6.15421, -22.8522)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="29"]
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="Cement" index="29"]
+transform = Transform3D(-17.8394, 0.707107, 3.04583e-06, 0, -4.37114e-08, 98.5432, -17.8394, -0.707107, -3.04583e-06, 11.158, 6.15421, 45.4291)
+mesh = SubResource("BoxMesh_w3xed")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="30"]
 transform = Transform3D(-47.6885, 0, 0, 0, -4.37114e-08, 123.464, 0, -1, -5.3968e-06, 26.9261, 23.1366, -35.8887)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="30"]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="31"]
 transform = Transform3D(1.10278e-06, -1, 7.14542e-07, 0, -4.37114e-08, -16.3468, 25.2287, 4.37114e-08, -8.93091e-14, -10.6865, -2.15963, -1.60349)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="31"]
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="32"]
 transform = Transform3D(1.10278e-06, -1, 7.14542e-07, 6.52968, -3.09086e-08, -15.7898, 24.3691, 5.35353e-08, 4.23086, 6.82638, -7.81599, -1.60349)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D17" type="MeshInstance3D" parent="Cement" index="32"]
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Cement" index="33"]
 transform = Transform3D(-2.41043, -0.948057, -4.95981, -7.18401, 0.318099, -14.7821, 24.0639, 2.85641e-08, -4.90987, 29.6033, 2.3256, 6.26572)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="Cement" index="33"]
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Cement" index="34"]
 transform = Transform3D(-6.14995, -0.336043, 14.8716, 2.19426, -0.941846, -5.30606, 24.3691, 5.35353e-08, 4.23086, 21.6701, -7.81599, -1.60349)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D14" type="MeshInstance3D" parent="Cement" index="34"]
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Cement" index="35"]
 transform = Transform3D(-6.14995, -0.336043, 14.8716, 2.19426, -0.941846, -5.30606, 24.3691, 5.35353e-08, 4.23086, 89.1941, -7.81599, -1.60349)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="Cement" index="35"]
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Cement" index="36"]
 transform = Transform3D(-5.90025, 0.428367, 14.2677, -2.7971, -0.903604, 6.76384, 24.3691, 4.15106e-08, 4.23086, 32.0069, -12.5282, -1.60349)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement" index="36"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement" index="37"]
 transform = Transform3D(-25.2287, 0, 0, 0, -4.37114e-08, -16.3468, 0, -1, 7.14542e-07, 0, -2.15963, 7.80886)
 mesh = SubResource("BoxMesh_w3xed")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="37"]
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="38"]
 transform = Transform3D(-25.2287, 0, 0, 0, -0.965926, -4.23087, 0, -0.258819, 15.7898, 0, 7.66508, 0.90981)
 mesh = SubResource("BoxMesh_w3xed")
 

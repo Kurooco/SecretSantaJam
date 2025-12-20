@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://esaxckvyvjnc"]
+
+[ext_resource type="PackedScene" uid="uid://dhf61ba3mrm6f" path="res://hand.tscn" id="1_3rphk"]
+[ext_resource type="Script" uid="uid://csf3dgv7x2vjn" path="res://scenes/fighting_hand.gd" id="1_ctqsg"]
+[ext_resource type="PackedScene" uid="uid://dufu5qpeveefp" path="res://scenes/interaction_area.tscn" id="3_erk5i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s2c0r"]
+size = Vector3(3.61401, 3.26062, 2.3612)
+
+[node name="FightingHand" type="Node3D"]
+script = ExtResource("1_ctqsg")
+
+[node name="Hand" parent="." instance=ExtResource("1_3rphk")]
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.325187, 0)
+target_position = Vector3(0, 0, 300)
+collision_mask = 3
+collide_with_areas = true
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_erk5i")]
+automatic = true
+show_prompt = false
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0985293, 1.21198, 1.11129)
+shape = SubResource("BoxShape3D_s2c0r")
+
+[connection signal="activated" from="InteractionArea" to="." method="_on_interaction_area_activated"]
