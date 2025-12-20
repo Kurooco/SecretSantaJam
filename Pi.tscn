@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2o2vdha5i25e"]
+
+[ext_resource type="Texture2D" uid="uid://i4xmsli152gm" path="res://art/2d/pi.png" id="1_lbujf"]
+[ext_resource type="Script" uid="uid://dujfedvn5tx6j" path="res://pi.gd" id="1_upofi"]
+[ext_resource type="PackedScene" uid="uid://c5u8817ja2oi4" path="res://dialogic_signal_handler.tscn" id="3_aw3di"]
+
+[node name="Pi" type="Node3D"]
+script = ExtResource("1_upofi")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_lbujf")
+
+[node name="DialogicSignalHandler" parent="." instance=ExtResource("3_aw3di")]
+string = "pi_appear"
+
+[node name="DialogicSignalHandler2" parent="." instance=ExtResource("3_aw3di")]
+string = "pi_disappear"
+
+[connection signal="matched" from="DialogicSignalHandler" to="." method="_on_dialogic_signal_handler_matched"]
+[connection signal="matched" from="DialogicSignalHandler2" to="." method="_on_dialogic_signal_handler_2_matched"]

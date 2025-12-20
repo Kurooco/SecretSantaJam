@@ -1,2 +1,19 @@
-Ha!
-[signal arg="hand"]
+pi_guy: Well, you made it quite a bit farther than I expected.
+pi_guy: Let me guess, you figured out my dirty little secret, didn't you?
+pi_guy: You know that I'm not the real Pi?
+pi_guy: You would have figured it out sooner or later either way. This room is the last digit that I have.
+pi_guy: Of course, don't think that I'm just going to let you run around blabbing my little secret. I have too much to lose now.
+pi_guy: No, I'm afraid I'm just going to have to deal with you myself.
+pi_guy: Permanently.
+[signal arg="hand1"]
+[wait time="4.0"]
+pi_guy: Wait, what are you doing?
+pi_guy: No, not me! I am your master! Obey me at once!
+[signal arg="hand2"]
+pi_guy: NOOOOOOOOOOO!!!
+[wait time="7.0"]
+pi: He had it coming to him.
+[signal arg="pi_appear"]
+pi: Anyone who trys to impersonate me deserves what's coming to them.
+pi: If you want to see what true power looks like, follow me. Unlike that poor fellow, my path does not end here.
+[signal arg="pi_disappear"]
