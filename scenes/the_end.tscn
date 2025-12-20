@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://ldnjkvnp3x6t"]
+
+[ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_a842l"]
+[ext_resource type="Texture2D" uid="uid://dmbc6nhogyd7f" path="res://art/2d/blue_sky.png" id="2_2x4e2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2x4e2"]
+albedo_color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wtwb0"]
+material = SubResource("StandardMaterial3D_2x4e2")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2jfs8"]
+panorama = ExtResource("2_2x4e2")
+
+[sub_resource type="Sky" id="Sky_fpimk"]
+sky_material = SubResource("PanoramaSkyMaterial_2jfs8")
+
+[sub_resource type="Environment" id="Environment_pugnu"]
+background_mode = 2
+sky = SubResource("Sky_fpimk")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 3.3
+reflected_light_source = 2
+
+[sub_resource type="TextMesh" id="TextMesh_2x4e2"]
+text = "The End"
+font_size = 127
+
+[sub_resource type="TextMesh" id="TextMesh_wtwb0"]
+text = "Thank you for playing! I hope you liked it!!!"
+font_size = 127
+
+[node name="Node3D" instance=ExtResource("1_a842l")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cement" index="0"]
+transform = Transform3D(118.824, 0, 0, 0, 1, 0, 0, 0, 112.48, 0, -2.07469, 0)
+mesh = SubResource("BoxMesh_wtwb0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement" index="1"]
+transform = Transform3D(118.824, 0, 0, 0, -15.6427, 0, 0, 0, 11.0278, 0, -2.07469, 53.6339)
+mesh = SubResource("BoxMesh_wtwb0")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement" index="2"]
+transform = Transform3D(118.824, 0, 0, 0, -15.6427, 0, 0, 0, 11.0278, 0, -2.07469, -56.3395)
+mesh = SubResource("BoxMesh_wtwb0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="3"]
+transform = Transform3D(-5.19398e-06, 0, -11.0278, 0, -15.6427, 0, 118.824, 0, -4.82042e-07, 53.9999, -2.07469, -0.783188)
+mesh = SubResource("BoxMesh_wtwb0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="4"]
+transform = Transform3D(-5.19398e-06, 0, -11.0278, 0, -15.6427, 0, 118.824, 0, -4.82042e-07, -59.1776, -2.07469, -0.783188)
+mesh = SubResource("BoxMesh_wtwb0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
+environment = SubResource("Environment_pugnu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5.07572, -9.58248)
+mesh = SubResource("TextMesh_2x4e2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.13422)
+mesh = SubResource("TextMesh_wtwb0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.500302, 0.865851, 0, -0.865851, 0.500302, 0, 0, 0)
+light_indirect_energy = 3.118
+light_volumetric_fog_energy = 2.294
+shadow_enabled = true
+shadow_blur = 1.294

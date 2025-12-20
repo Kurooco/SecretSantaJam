@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7bd0muamkuqp"
-path.s3tc="res://.godot/imported/cover.png-03421bbd0338c8213efcb74874818cec.s3tc.ctex"
+uid="uid://cux57gjjolc24"
+path.s3tc="res://.godot/imported/exit_door.png-1eb447bd8a9ff245f8edcb264776132b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/misc/cover.png"
-dest_files=["res://.godot/imported/cover.png-03421bbd0338c8213efcb74874818cec.s3tc.ctex"]
+source_file="res://art/2d/exit_door.png"
+dest_files=["res://.godot/imported/exit_door.png-1eb447bd8a9ff245f8edcb264776132b.s3tc.ctex"]
 
 [params]
 
