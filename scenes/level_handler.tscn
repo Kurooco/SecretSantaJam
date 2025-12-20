@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bugh6l1dycfm6"]
+[gd_scene load_steps=16 format=3 uid="uid://bugh6l1dycfm6"]
 
 [ext_resource type="Script" uid="uid://eu871lvn5tjm" path="res://scenes/level_handler.gd" id="1_l6jjb"]
+[ext_resource type="PackedScene" uid="uid://b0ee262lc2sgv" path="res://scenes/room6.tscn" id="2_eay6x"]
+[ext_resource type="PackedScene" uid="uid://cwwksivvosaxj" path="res://scenes/world.tscn" id="2_hhy3g"]
 [ext_resource type="PackedScene" uid="uid://c6eex60frvfjq" path="res://scenes/room4.tscn" id="2_jxtpv"]
 [ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="2_n28l6"]
 [ext_resource type="PackedScene" uid="uid://bn1wkc0w0qlad" path="res://scenes/room3.tscn" id="2_ylg7y"]
@@ -9,6 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://byv81ea3cgh20" path="res://scenes/person_room.tscn" id="4_4njay"]
 [ext_resource type="PackedScene" uid="uid://crk0geyinwqv3" path="res://scenes/room2.tscn" id="6_2r54h"]
 [ext_resource type="PackedScene" uid="uid://b8qxen6giafmx" path="res://scenes/paper.tscn" id="6_phxu2"]
+[ext_resource type="PackedScene" uid="uid://bx0xsyjsxkqee" path="res://scenes/room5.tscn" id="9_o8rwv"]
+[ext_resource type="PackedScene" uid="uid://c3ou00oci4yoo" path="res://scenes/final_room.tscn" id="10_0pvvx"]
+[ext_resource type="PackedScene" uid="uid://d0wqe1yp3v7jy" path="res://scenes/space_room.tscn" id="11_hhy3g"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c7bce"]
 shader = ExtResource("3_n28l6")
@@ -16,8 +21,8 @@ shader_parameter/pixel_size = 6
 
 [node name="LevelHandler" type="Node"]
 script = ExtResource("1_l6jjb")
-first_scene = ExtResource("2_jxtpv")
-room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("4_4njay"), ExtResource("3_c7bce"), ExtResource("6_2r54h"), ExtResource("2_ylg7y"), ExtResource("2_jxtpv")])
+first_scene = ExtResource("2_hhy3g")
+room_order = Array[PackedScene]([ExtResource("2_n28l6"), ExtResource("3_c7bce"), ExtResource("3_c7bce"), ExtResource("4_4njay"), ExtResource("3_c7bce"), ExtResource("6_2r54h"), ExtResource("2_ylg7y"), ExtResource("2_jxtpv"), ExtResource("9_o8rwv"), ExtResource("2_eay6x"), ExtResource("10_0pvvx"), ExtResource("11_hhy3g")])
 
 [node name="FadeCanvas" type="CanvasLayer" parent="."]
 layer = 10

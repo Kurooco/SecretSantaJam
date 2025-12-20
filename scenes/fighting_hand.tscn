@@ -9,8 +9,8 @@ size = Vector3(3.61401, 3.26062, 2.3612)
 
 [node name="FightingHand" type="Node3D"]
 script = ExtResource("1_ctqsg")
-continue_charge = null
-disabled = null
+advance_speed = 5.0
+retreat_speed = 2.0
 
 [node name="Hand" parent="." instance=ExtResource("1_3rphk")]
 

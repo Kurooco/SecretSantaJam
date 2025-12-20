@@ -1,0 +1,135 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx0xsyjsxkqee"]
+
+[ext_resource type="PackedScene" uid="uid://cy7vycv02f4bq" path="res://scenes/level_base.tscn" id="1_jrxg1"]
+[ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="2_d7ax2"]
+[ext_resource type="PackedScene" uid="uid://esaxckvyvjnc" path="res://scenes/fighting_hand.tscn" id="3_xwywi"]
+[ext_resource type="PackedScene" uid="uid://ckbu7rhdyku4a" path="res://scenes/number_door.tscn" id="4_d7ax2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ks1ra"]
+material = ExtResource("2_d7ax2")
+
+[node name="Node3D" instance=ExtResource("1_jrxg1")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cement" index="0"]
+transform = Transform3D(-52.4808, 0, 0, 0, 1, 0, 0, 0, -67.6667, 0, -5.01844, 0)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Cement" index="1"]
+transform = Transform3D(-111.799, 0, 0, 0, 1, 0, 0, 0, -67.6667, 0, -13.1025, 0)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Cement" index="2"]
+transform = Transform3D(-14.187, 0, 0, 0, 1, 0, 0, 0, -32.4942, 0, 5.91059, 0)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Cement" index="3"]
+transform = Transform3D(-47.4198, 0, 0, 0, 1, 0, 0, 0, -32.4942, 0, 13.0497, -21.1987)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Cement" index="4"]
+transform = Transform3D(-14.187, 0, 0, 0, -1.49012e-08, 32.4942, 0, 1, 0, 0, 9.38713, 14.0829)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Cement" index="5"]
+transform = Transform3D(-14.187, 0, 0, 0, -1.49012e-08, 32.4942, 0, 1, 0, 13.0173, 9.38713, -15.3838)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Cement" index="6"]
+transform = Transform3D(-96.7768, 0, 0, 0, -1.49012e-08, 57.9611, 0, 1, 0, 9.20122, 9.38713, -32.6155)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Cement" index="7"]
+transform = Transform3D(-14.187, 0, 0, 0, -1.49012e-08, 32.4942, 0, 1, 0, -0.634782, 21.9596, -15.3838)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Cement" index="8"]
+transform = Transform3D(6.20132e-07, 1, 0, 14.187, -4.37114e-08, 0, 0, 0, -32.4942, 6.40298, 0.808461, 0)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Cement" index="9"]
+transform = Transform3D(6.20132e-07, 1, 0, 14.187, -4.37114e-08, 0, 0, 0, -100.649, 25.119, -5.81881, -17.426)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Cement" index="10"]
+transform = Transform3D(6.20132e-07, -4.73878, 0, 14.187, 2.07139e-07, 0, 0, 0, -6.49522, 22.9155, -7.68247, 32.2491)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Cement" index="11"]
+transform = Transform3D(6.20132e-07, -4.73878, 0, 14.187, 2.07139e-07, 0, 0, 0, -6.49522, 18.6997, -9.43546, 32.2491)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Cement" index="12"]
+transform = Transform3D(2.31375e-13, -4.37114e-08, -100.649, 26.4506, -4.37114e-08, 0, -1.15619e-06, -1, 4.3995e-06, 25.119, -5.81881, 32.4819)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Cement" index="13"]
+transform = Transform3D(-1.15619e-06, -1, 8.799e-06, 26.4506, -4.37114e-08, 0, -2.74808e-13, 8.74228e-08, 100.649, 55.138, -5.81881, 11.3338)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Cement" index="14"]
+transform = Transform3D(1.34635e-06, 1, 0, 30.801, -4.37114e-08, 0, 0, 0, -75.2883, -6.45459, -0.125293, 0)
+mesh = SubResource("BoxMesh_ks1ra")
+
+[node name="FightingHand" parent="." index="2" instance=ExtResource("3_xwywi")]
+transform = Transform3D(-4.07e-08, -0.364747, -0.931107, -1.59436e-08, 0.931107, -0.364747, 1, 0, -4.37114e-08, 33.29, 7.75777, -21.9291)
+
+[node name="FightingHand2" parent="." index="3" instance=ExtResource("3_xwywi")]
+transform = Transform3D(-0.982473, 0, 0.186404, 0, 1, 0, -0.186404, 0, -0.982473, 14.7721, -2.62437, 24.7194)
+advance_speed = 15.0
+retreat_speed = 10.0
+
+[node name="FightingHand3" parent="." index="4" instance=ExtResource("3_xwywi")]
+transform = Transform3D(-0.999996, -8.02277e-09, 0.0029146, -0.0029146, -4.29688e-08, -0.999996, 8.14798e-09, -1, 4.29453e-08, 5.10968, 7.86448, 24.7194)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand4" parent="." index="5" instance=ExtResource("3_xwywi")]
+transform = Transform3D(-0.651076, -0.75901, 0.00189767, -0.0029146, -4.29688e-08, -0.999996, 0.759007, -0.651079, -0.00221218, 45.7163, -2.07397, 24.7194)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand5" parent="." index="6" instance=ExtResource("3_xwywi")]
+transform = Transform3D(-0.999996, -8.02277e-09, 0.0029146, -0.0029146, -4.29688e-08, -0.999996, 8.14798e-09, -1, 4.29453e-08, 33.8326, -1.70315, 24.7194)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand6" parent="." index="7" instance=ExtResource("3_xwywi")]
+transform = Transform3D(0.367701, 0.929943, -0.00107175, -0.0029146, -4.29688e-08, -0.999996, -0.929939, 0.367703, 0.0027104, 33.8326, -1.70315, 10.8312)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand10" parent="." index="8" instance=ExtResource("3_xwywi")]
+transform = Transform3D(0.367701, 0.929943, -0.00107175, -0.0029146, -4.29688e-08, -0.999996, -0.929939, 0.367703, 0.0027104, 27.2746, -1.70315, 2.8719)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand7" parent="." index="9" instance=ExtResource("3_xwywi")]
+transform = Transform3D(0.367701, 0.929943, -0.00107175, -0.0029146, -4.29688e-08, -0.999996, -0.929939, 0.367703, 0.0027104, 44.0706, -1.70315, 3.97701)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand9" parent="." index="10" instance=ExtResource("3_xwywi")]
+transform = Transform3D(0.992437, 0.122718, -0.00289258, -0.122718, 0.992442, 0.000357675, 0.0029146, -1.12878e-09, 0.999996, 50.8, -9.65053, -27.5098)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="FightingHand8" parent="." index="11" instance=ExtResource("3_xwywi")]
+transform = Transform3D(-0.984438, 0.17571, 0.00286925, -0.0029146, -4.28832e-08, -0.999996, -0.17571, -0.984442, 0.000512168, 36.9375, -1.70315, -5.92436)
+advance_speed = 20.0
+retreat_speed = 10.0
+
+[node name="NumberDoor" parent="." index="12" instance=ExtResource("4_d7ax2")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, -2.03453, 13.556)
+number = 3
+
+[node name="NumberDoor2" parent="." index="13" instance=ExtResource("4_d7ax2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.84536, -2.03453, 11.1814)
+number = 7
+
+[node name="NumberDoor3" parent="." index="14" instance=ExtResource("4_d7ax2")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -5.583, -2.03453, 19.8904)
+number = 9
+
+[node name="NumberDoor4" parent="." index="15" instance=ExtResource("4_d7ax2")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 25.7983, -10.3156, -3.87555)
+number = 5

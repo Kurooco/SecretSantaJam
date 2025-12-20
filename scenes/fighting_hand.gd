@@ -9,8 +9,8 @@ var pursuing = false
 	set(l):
 		length = l
 		$RayCast3D.target_position.z = l
-@export var advance_speed = 5.0
-@export var retreat_speed = 2.0
+@export var advance_speed = 10.0
+@export var retreat_speed = 5.0
 @export var continue_charge : bool = true
 @export var disabled = false
 
