@@ -4,11 +4,11 @@ extends Node
 @onready var fade = $FadeCanvas/Fade
 var current_level = null
 var fade_tween : Tween = null
+var restarting = false
 
 var digit_order = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
 @export var room_order : Array[PackedScene]
 var current_digit = 0
-
 signal fade_ended
 signal level_set
 
@@ -28,6 +28,7 @@ func set_level(scene: PackedScene, fade = true):
 	current_level = scene.instantiate()
 	add_child(current_level)
 	level_set.emit()
+	restarting = false
 	
 	if(fade):
 		fade_in()
@@ -53,3 +54,8 @@ func submit_number(num:int):
 	else:
 		current_digit = 0
 	set_level(room_order[current_digit])
+
+func restart():
+	if(!restarting):
+		restarting = true
+		set_level(room_order[current_digit])

@@ -41,3 +41,5 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	if(position.y < -1000):
+		Autoload.level_handler.restart()
