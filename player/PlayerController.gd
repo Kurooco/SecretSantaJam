@@ -16,7 +16,7 @@ func _ready():
 func _input(event: InputEvent):
 	if (Input.mouse_mode != Input.MOUSE_MODE_CAPTURED) and event is InputEventMouseButton: 
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	if(event is InputEventMouseMotion):
+	if(event is InputEventMouseMotion && Input.mouse_mode == Input.MOUSE_MODE_CAPTURED):
 		mouse_position += event.relative
 		var viewport_size = get_viewport().size
 		mouse_position = Vector2(int(mouse_position.x) % viewport_size.x, max(min(mouse_position.y, viewport_size.y/2.0), 20))

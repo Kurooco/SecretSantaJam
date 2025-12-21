@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cwwksivvosaxj"]
+[gd_scene load_steps=26 format=3 uid="uid://cwwksivvosaxj"]
 
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
@@ -11,9 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://ddpo0het20fbc" path="res://scenes/door.tscn" id="8_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://x0g7ddhggcti" path="res://art/2d/wall_decorations/graph4.png" id="8_jhx03"]
 [ext_resource type="Texture2D" uid="uid://bupocyf4ktux8" path="res://art/2d/trye.png" id="8_w7kh3"]
+[ext_resource type="Texture2D" uid="uid://db6nqx6qetyok" path="res://art/2d/wall_decorations/graph6.png" id="9_dss4m"]
 [ext_resource type="Texture2D" uid="uid://dix4eudh3uw2y" path="res://art/2d/wall_decorations/graph5.png" id="9_jhx03"]
 [ext_resource type="Texture2D" uid="uid://ble74sp2qg6js" path="res://art/2d/wall_decorations/graph3.png" id="9_o8fc1"]
 [ext_resource type="Texture2D" uid="uid://cv2auds83jhm8" path="res://art/2d/dark_sky.png" id="14_o8fc1"]
+[ext_resource type="PackedScene" uid="uid://cjp5eahpl1mqi" path="res://level_music.tscn" id="15_xo05s"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_036b0"]
 material = ExtResource("3_qfnet")
@@ -54,7 +56,7 @@ material = SubResource("StandardMaterial3D_o8fc1")
 script = ExtResource("1_k0juu")
 
 [node name="Node3D" parent="." instance=ExtResource("2_71j4m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0431, 1.71438, 29.8679)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4895, 2.54224, 31.276)
 
 [node name="Cement" type="StaticBody3D" parent="."]
 
@@ -166,6 +168,11 @@ transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 
 shaded = true
 texture = ExtResource("8_jhx03")
 
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 3.93345, 2.46248, 12.6332)
+shaded = true
+texture = ExtResource("9_dss4m")
+
 [node name="Sprite3D7" type="Sprite3D" parent="."]
 transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -3.73037, -5.83345, 6.19302)
 shaded = true
@@ -208,3 +215,6 @@ mesh = SubResource("SphereMesh_o8fc1")
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(47.2846, 0, 0, 0, 19.7895, 0, 0, 0, 77.9374, 43.6533, -3.38464, 80.9605)
 mesh = SubResource("SphereMesh_o8fc1")
+
+[node name="LevelMusic" parent="." instance=ExtResource("15_xo05s")]
+music = "res://sounds/music/Creepy Ambience (Damp).wav"
