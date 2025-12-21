@@ -36,6 +36,7 @@ directories/dtl_directory={
 "timeline_test": "res://dialogue/timelines/timeline_test.dtl"
 }
 variables={
+"pi_guy": false,
 "random_guy": false
 }
 layout/style_list=[]

@@ -3,7 +3,7 @@ if {random_guy} == true:
 else:
 	[signal arg_type="dict" arg="{"music":"res://sounds/music/RandomDude.wav"}"]
 	Hey there.
-	As you can see, things didn't turn out too well for me. I took to many wrong turns, and now I can't go on.
+	As you can see, things didn't turn out too well for me. I took too many wrong turns, and now I can't go on.
 	But you look like you're just starting your journey!
 	If that's the case, I'll let you in on a little secret...
 	That guy upstairs who claims to be Pi?[pause=1.0] He's a fake!

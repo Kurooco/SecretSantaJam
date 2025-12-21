@@ -1,12 +1,18 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwwksivvosaxj"]
+[gd_scene load_steps=18 format=3 uid="uid://cwwksivvosaxj"]
 
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
 [ext_resource type="Material" uid="uid://bcthhcniqi7hj" path="res://art/materials/new_standard_material_3d.tres" id="3_qfnet"]
 [ext_resource type="Texture2D" uid="uid://crrirywkyelj2" path="res://art/textures/DSC_0216.JPG" id="4_qfnet"]
+[ext_resource type="Texture2D" uid="uid://tfiq0tj3bmhk" path="res://art/2d/wall_decorations/graph1.png" id="6_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://b8xkho4rmnowb" path="res://art/2d/wall_decorations/keep_out.png" id="6_qfnet"]
+[ext_resource type="Texture2D" uid="uid://2mxdpkihs5ck" path="res://art/2d/wall_decorations/graph2.png" id="7_q5onr"]
 [ext_resource type="PackedScene" uid="uid://cloa0qy8m1jw8" path="res://scenes/decimal_place.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://ddpo0het20fbc" path="res://scenes/door.tscn" id="8_7r4gi"]
+[ext_resource type="Texture2D" uid="uid://x0g7ddhggcti" path="res://art/2d/wall_decorations/graph4.png" id="8_jhx03"]
+[ext_resource type="Texture2D" uid="uid://bupocyf4ktux8" path="res://art/2d/trye.png" id="8_w7kh3"]
+[ext_resource type="Texture2D" uid="uid://dix4eudh3uw2y" path="res://art/2d/wall_decorations/graph5.png" id="9_jhx03"]
+[ext_resource type="Texture2D" uid="uid://ble74sp2qg6js" path="res://art/2d/wall_decorations/graph3.png" id="9_o8fc1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_036b0"]
 material = ExtResource("3_qfnet")
@@ -120,8 +126,40 @@ spot_range = 13.303
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8505, 2.2315, 13.832)
+shaded = true
 texture = ExtResource("6_qfnet")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 20.8505, 2.46248, -6.21748)
+shaded = true
+texture = ExtResource("6_7r4gi")
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.79299, 2.46248, -6.21748)
+shaded = true
+texture = ExtResource("7_q5onr")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 9.04129, 2.46248, 4.05415)
+shaded = true
+texture = ExtResource("8_jhx03")
+
+[node name="Sprite3D7" type="Sprite3D" parent="."]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -3.73037, -5.83345, 6.19302)
+shaded = true
+texture = ExtResource("9_jhx03")
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform3D(-0.5, 0, -1.49012e-08, 0, 0.5, 0, 1.49012e-08, 0, -0.5, 18.9807, 2.74932, 12.6319)
+shaded = true
+texture = ExtResource("9_o8fc1")
 
 [node name="Door" parent="." instance=ExtResource("8_7r4gi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52941, -15.0971, 0.514531)
+shaded = true
 level = ExtResource("8_4mrxx")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(-0.4, 0, 3.49691e-08, 0, 0.4, 0, -3.49691e-08, 0, -0.4, -12.8952, -10.9291, 15.9982)
+shaded = true
+texture = ExtResource("8_w7kh3")

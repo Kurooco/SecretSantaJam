@@ -89,7 +89,6 @@ timeline = "timeline_test"
 automatic = true
 show_prompt = false
 one_shot = true
-disabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DialogueArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9345, 0.154663, 1.56204)
