@@ -17,7 +17,7 @@ size = Vector3(1, 16.1534, 14.9036)
 [node name="Node3D" instance=ExtResource("1_l12df")]
 
 [node name="PlayerController" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.7598, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52149, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cement" index="0"]
 transform = Transform3D(-46.1967, 0, 0, 0, 1, 0, 0, 0, -16.1097, 8.88417, -2.17468, 0)

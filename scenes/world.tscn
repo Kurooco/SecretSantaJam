@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cwwksivvosaxj"]
+[gd_scene load_steps=24 format=3 uid="uid://cwwksivvosaxj"]
 
 [ext_resource type="Script" uid="uid://c3a2g3dtoq50k" path="res://scripts/world.gd" id="1_k0juu"]
 [ext_resource type="PackedScene" uid="uid://br6qsupvcmxyl" path="res://player/player.tscn" id="2_71j4m"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bupocyf4ktux8" path="res://art/2d/trye.png" id="8_w7kh3"]
 [ext_resource type="Texture2D" uid="uid://dix4eudh3uw2y" path="res://art/2d/wall_decorations/graph5.png" id="9_jhx03"]
 [ext_resource type="Texture2D" uid="uid://ble74sp2qg6js" path="res://art/2d/wall_decorations/graph3.png" id="9_o8fc1"]
+[ext_resource type="Texture2D" uid="uid://cv2auds83jhm8" path="res://art/2d/dark_sky.png" id="14_o8fc1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_036b0"]
 material = ExtResource("3_qfnet")
@@ -27,6 +28,27 @@ material = SubResource("StandardMaterial3D_71j4m")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_71j4m"]
 size = Vector3(1, 5.27441, 8.42004)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xo05s"]
+panorama = ExtResource("14_o8fc1")
+
+[sub_resource type="Sky" id="Sky_dss4m"]
+sky_material = SubResource("PanoramaSkyMaterial_xo05s")
+radiance_size = 2
+
+[sub_resource type="Environment" id="Environment_7t5mc"]
+background_mode = 2
+sky = SubResource("Sky_dss4m")
+ambient_light_source = 1
+ambient_light_energy = 0.0
+reflected_light_source = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8fc1"]
+albedo_texture = ExtResource("4_qfnet")
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="SphereMesh" id="SphereMesh_o8fc1"]
+material = SubResource("StandardMaterial3D_o8fc1")
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_k0juu")
@@ -163,3 +185,26 @@ level = ExtResource("8_4mrxx")
 transform = Transform3D(-0.4, 0, 3.49691e-08, 0, 0.4, 0, -3.49691e-08, 0, -0.4, -12.8952, -10.9291, 15.9982)
 shaded = true
 texture = ExtResource("8_w7kh3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7t5mc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(47.2846, 0, 0, 0, 19.7895, 0, 0, 0, 77.9374, 82.154, 0, 14.5147)
+mesh = SubResource("SphereMesh_o8fc1")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(47.2846, 0, 0, 0, 19.7895, 0, 0, 0, 77.9374, 82.154, 0, -32.1984)
+mesh = SubResource("SphereMesh_o8fc1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(47.2846, 0, 0, 0, 19.7895, 0, 0, 0, 77.9374, 82.154, -3.38464, 62.1812)
+mesh = SubResource("SphereMesh_o8fc1")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(91.8503, 0, 0, 0, 43.5922, 0, 0, 0, 157.899, 137.333, -3.38464, 91.7338)
+mesh = SubResource("SphereMesh_o8fc1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(47.2846, 0, 0, 0, 19.7895, 0, 0, 0, 77.9374, 43.6533, -3.38464, 80.9605)
+mesh = SubResource("SphereMesh_o8fc1")
