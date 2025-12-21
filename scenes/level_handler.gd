@@ -36,6 +36,7 @@ func set_level(scene: PackedScene, fade = true):
 		fade_in()
 
 func fade_out(color=Color.BLACK):
+	fade.show()
 	if(is_instance_valid(fade_tween)):
 		fade_tween.kill()
 	fade_tween = create_tween()
@@ -49,6 +50,7 @@ func fade_in():
 	fade_tween = create_tween()
 	fade_tween.tween_property(fade, "color", transparent_color, 1)
 	fade_tween.tween_callback(fade_ended.emit)
+	fade_tween.tween_callback(fade.hide)
 
 func submit_number(num:int):
 	#Check e route

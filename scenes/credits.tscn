@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt5aeraojja2f"]
+
+[ext_resource type="Texture2D" uid="uid://crrirywkyelj2" path="res://art/textures/DSC_0216.JPG" id="1_0bpdh"]
+[ext_resource type="PackedScene" uid="uid://cwpj6cmc2kqpe" path="res://location_button.tscn" id="2_0ctdu"]
+[ext_resource type="Texture2D" uid="uid://du0ghkdg4xvxq" path="res://art/textures/960px-Cascading_Milky_Way.jpg" id="4_2fbfq"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.136826, 0.136826, 0.136826, 1)
+offset_right = 1158.0
+offset_bottom = 646.0
+texture = ExtResource("1_0bpdh")
+expand_mode = 1
+
+[node name="LocationButton" parent="." instance=ExtResource("2_0ctdu")]
+offset_left = 18.0
+offset_top = 25.0
+offset_right = 112.0
+offset_bottom = 61.0
+text = "Back
+"
+location = "res://scenes/main_menu.tscn"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 132.0
+offset_right = 1104.0
+offset_bottom = 517.0
+theme_override_font_sizes/font_size = 30
+text = "I did all of the coding and music. The music was created using GaradgeBand. Most of the art was done by me and was created using Paint 3D and the Scratch bitmap editor. The only piece of outside art that I used was a photo that I got from wikipedia, which is credited here:
+
+"
+autowrap_mode = 3
+
+[node name="Credit" type="RichTextLabel" parent="."]
+offset_left = 122.0
+offset_top = 391.0
+offset_right = 664.0
+offset_bottom = 596.0
+bbcode_enabled = true
+text = "ESO/S. Brunier. \"Cascading Milky Way.\"[i] Wikimedia Commons[/i]. 11 June 2012, 
+https://commons.wikimedia.org/wiki/File:Cascading_Milky_Way.jpg 
+License:
+https://creativecommons.org/licenses/by/4.0/deed.en. This work is unaltered.
+"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 686.0
+offset_top = 394.0
+offset_right = 1040.0
+offset_bottom = 527.0
+texture = ExtResource("4_2fbfq")
+expand_mode = 1

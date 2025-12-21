@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwpj6cmc2kqpe"]
+
+[ext_resource type="Script" uid="uid://d3gihre3dau0q" path="res://scenes/location_button.gd" id="1_ycl23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+bg_color = Color(0.0458624, 0.0587719, 0.0649066, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="LocationButton" type="Button"]
+offset_left = 439.0
+offset_top = 407.0
+offset_right = 786.0
+offset_bottom = 470.0
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
+text = "Start"
+script = ExtResource("1_ycl23")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

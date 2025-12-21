@@ -13,7 +13,7 @@ config_version=5
 config/name="SecretSantaJam"
 run/main_scene="uid://bugh6l1dycfm6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="uid://c7bd0muamkuqp"
+config/icon="uid://ys16s1l2spyy"
 
 [autoload]
 
