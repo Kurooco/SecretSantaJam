@@ -48,6 +48,12 @@ size_flags_vertical = 3
 location = "res://scenes/world.tscn"
 fade = true
 
+[node name="Start3" parent="VBoxContainer" instance=ExtResource("3_rtw2f")]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Controls"
+location = "res://Controls.tscn"
+
 [node name="Start2" parent="VBoxContainer" instance=ExtResource("3_rtw2f")]
 layout_mode = 2
 size_flags_vertical = 3

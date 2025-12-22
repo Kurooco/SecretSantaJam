@@ -28,7 +28,7 @@ offset_top = 132.0
 offset_right = 1104.0
 offset_bottom = 517.0
 theme_override_font_sizes/font_size = 30
-text = "I did all of the coding and music. The music was created using GaradgeBand. Most of the art was done by me and was created using Paint 3D and the Scratch bitmap editor. The only piece of outside art that I used was a photo that I got from wikipedia, which is credited here:
+text = "I did all of the coding and music. The music was created using GaradgeBand. I used Dialogic for the dialogue system. Most of the art was done by me and was created using Paint 3D and the Scratch bitmap editor. The only piece of outside art that I used was a photo that I got from wikipedia, which is credited here:
 
 "
 autowrap_mode = 3
